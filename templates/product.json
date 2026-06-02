@@ -192,6 +192,7 @@
         "description",
         "sticky-atc"
       ],
+      "disabled": true,
       "settings": {
         "enable_sticky_image": true,
         "show_product_name": false,
