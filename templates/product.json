@@ -1,1 +1,738 @@
-{"sections":{"main":{"type":"main-product","blocks":{"html_k6nFcL":{"type":"html","settings":{"custom_html":"<style>\n.star-review-wrapper {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  flex-shrink: 0;\n}\n\n.star-icons {\n  display: flex;\n  flex-direction: row;\n  gap: 4px; \/* space between stars *\/\n}\n\n.star-icons svg {\n  width: 20px;\n  height: 20px;\n  fill: #2F6FED; \/* star color *\/\n}\n\n.review-text {\n  font-size: 16px;\n  font-weight: 500;\n  color: #333;\n  white-space: nowrap;\n}\n\n\/* Mobile fix *\/\n@media (max-width: 480px) {\n  .star-review-wrapper {\n    flex-direction: row;\n    justify-content: center;\n  }\n}\n<\/style>\n\n<div class=\"star-review-wrapper\">\n  \n  <div class=\"star-icons\">\n    <!-- 5 Stars -->\n    <svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewBox=\"0 0 24 24\">\n      <path d=\"M12 17.27L18.18 21l-1.64-7.03L22 \n      9.24l-7.19-.61L12 2 9.19 8.63 2 \n      9.24l5.46 4.73L5.82 21z\"\/>\n    <\/svg>\n\n    <svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewBox=\"0 0 24 24\">\n      <path d=\"M12 17.27L18.18 21l-1.64-7.03L22 \n      9.24l-7.19-.61L12 2 9.19 8.63 2 \n      9.24l5.46 4.73L5.82 21z\"\/>\n    <\/svg>\n\n    <svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewBox=\"0 0 24 24\">\n      <path d=\"M12 17.27L18.18 21l-1.64-7.03L22 \n      9.24l-7.19-.61L12 2 9.19 8.63 2 \n      9.24l5.46 4.73L5.82 21z\"\/>\n    <\/svg>\n\n    <svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewBox=\"0 0 24 24\">\n      <path d=\"M12 17.27L18.18 21l-1.64-7.03L22 \n      9.24l-7.19-.61L12 2 9.19 8.63 2 \n      9.24l5.46 4.73L5.82 21z\"\/>\n    <\/svg>\n\n    <svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewBox=\"0 0 24 24\">\n      <path d=\"M12 17.27L18.18 21l-1.64-7.03L22 \n      9.24l-7.19-.61L12 2 9.19 8.63 2 \n      9.24l5.46 4.73L5.82 21z\"\/>\n    <\/svg>\n  <\/div>\n\n  <div class=\"review-text\">\n    <strong>5<\/strong> by <strong>124+<\/strong> Customers\n  <\/div>\n\n<\/div>"}},"product_name_xkPbAa":{"type":"product_name","settings":{"title_size":100,"heading_tag":"h1"}},"price":{"type":"price","settings":{"show_tax_and_shipping":false,"text_size_price":70}},"html_bm7Qqj":{"type":"html","settings":{"custom_html":"<section class=\"sale-timer\" aria-label=\"Sale countdown timer\">\n  <style>\n    .sale-timer{\n      width:100%;\n      padding:22px 12px;\n      display:flex;\n      justify-content:center;\n      background:##ff85d0;\n      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n    }\n    .sale-timer__wrap{\n      text-align:center;\n    }\n    .sale-timer__label{\n      font-size:24px;\n      font-weight:500;\n      color:#111;\n      margin:0 0 14px 0;\n      line-height:1.1;\n    }\n\n    .sale-timer__row{\n      display:flex;\n      align-items:center;\n      justify-content:center;\n      gap:10px;\n    }\n\n    .sale-timer__box{\n      width:88px;\n      height:68px;\n      background:#2F6FED;\n      color:#fff;\n      border-radius:6px;\n      display:flex;\n      align-items:center;\n      justify-content:center;\n      font-size:34px;\n      font-weight:700;\n      letter-spacing:1px;\n      font-variant-numeric: tabular-nums;\n    }\n\n    .sale-timer__colon{\n      font-size:32px;\n      font-weight:700;\n      color:#ff2a2a;\n      line-height:1;\n      transform: translateY(-1px);\n      user-select:none;\n    }\n\n    @media (max-width:420px){\n      .sale-timer__label{ font-size:20px; }\n      .sale-timer__box{ width:72px; height:58px; font-size:30px; }\n      .sale-timer__colon{ font-size:28px; }\n      .sale-timer__row{ gap:8px; }\n    }\n  <\/style>\n\n  <div class=\"sale-timer__wrap\">\n    <div class=\"sale-timer__label\">Hurry! Sale ends in<\/div>\n\n    <div class=\"sale-timer__row\" role=\"timer\" aria-live=\"polite\">\n      <div class=\"sale-timer__box\" id=\"st-hours\">00<\/div>\n      <div class=\"sale-timer__colon\">:<\/div>\n      <div class=\"sale-timer__box\" id=\"st-mins\">00<\/div>\n      <div class=\"sale-timer__colon\">:<\/div>\n      <div class=\"sale-timer__box\" id=\"st-secs\">00<\/div>\n    <\/div>\n  <\/div>\n\n  <script>\n    (function () {\n      const durationHours = 12; \/\/ change if needed\n      const endAt = Date.now() + durationHours * 60 * 60 * 1000;\n\n      const h = document.getElementById(\"st-hours\");\n      const m = document.getElementById(\"st-mins\");\n      const s = document.getElementById(\"st-secs\");\n\n      const pad = n => String(n).padStart(2, \"0\");\n\n      function update(){\n        let diff = endAt - Date.now();\n        if(diff < 0) diff = 0;\n\n        const total = Math.floor(diff \/ 1000);\n        h.textContent = pad(Math.floor(total \/ 3600));\n        m.textContent = pad(Math.floor((total % 3600) \/ 60));\n        s.textContent = pad(total % 60);\n\n        if(diff === 0) clearInterval(timer);\n      }\n\n      update();\n      const timer = setInterval(update, 1000);\n    })();\n  <\/script>\n<\/section>"}},"html_riyhhe":{"type":"html","settings":{"custom_html":"<div style=\"padding: 12px; text-align: left; background-color: #f9f9f9; font-size: 15px; border-radius: 12px; margin-top: 10px; margin-bottom: 10px; line-height: 1.6;\">\n<span style=\"font-weight: bold;\">😌 Relax & Refresh Instantly<\/span> – Soothe tired eyes and unwind after long screen time or a busy day.<br><br>\n<span style=\"font-weight: bold;\">🔴 Advanced Light Therapy<\/span> – Gentle red light helps support a brighter, more youthful-looking eye area.<br><br>\n<span style=\"font-weight: bold;\">✨ Reduce Puffiness & Dark Circles<\/span> – Enjoy a smoother, revitalized appearance with regular use.\n<\/div>"}},"quantity_selector":{"type":"quantity_selector","settings":{}},"gift_wrapping_EK3NQn":{"type":"gift_wrapping","settings":{"text_gift":"","color_icon_light":"rgba(0,0,0,0)","color_icon_dark":"rgba(0,0,0,0)"}},"buy_buttons":{"type":"buy_buttons","settings":{"show_button_style":"primary","show_dynamic_checkout":false,"show_gift_card_recipient":true,"pickup_availability":false,"hide_when_pre_order":false,"preorder_button_label":"Pre-order","preorder_message":"<p>This product will be available for sale in 2 weeks, but you can pre-order now to receive 10% discount!<\/p>","preorder_show_dynamic_button":false,"show_background":false,"box_type":"square","background_color_light":"rgba(0,0,0,0)","message_color_light":"rgba(0,0,0,0)","background_color_dark":"rgba(0,0,0,0)","message_color_dark":"rgba(0,0,0,0)","button_light":"rgba(0,0,0,0)","button_text_light":"rgba(0,0,0,0)","button_hover_light":"rgba(0,0,0,0)","button_text_hover_light":"rgba(0,0,0,0)","secondary_button_light":"rgba(0,0,0,0)","secondary_button_text_light":"rgba(0,0,0,0)","button_dark":"rgba(0,0,0,0)","button_text_dark":"rgba(0,0,0,0)","button_hover_dark":"rgba(0,0,0,0)","button_text_hover_dark":"rgba(0,0,0,0)","secondary_button_dark":"rgba(0,0,0,0)","secondary_button_text_dark":"rgba(0,0,0,0)"}},"html_DK78JD":{"type":"html","settings":{"custom_html":"<div style=\"padding: 12px; text-align: left; background-color: #f5f5f5; font-size: 15px; border-radius: 13px; margin-top: 12px; margin-bottom: 12px; display: flex; align-items: center;\"> \n    <span class=\"em\" style=\"margin-right: 8px;\">\n        <svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" height=\"24px\" viewBox=\"0 -960 960 960\" width=\"24px\" fill=\"#545454\">\n            <path d=\"M240-160q-50 0-85-35t-35-85H40v-440q0-33 23.5-56.5T120-800h560v160h120l120 160v200h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85H360q0 50-35 85t-85 35Zm0-80q17 0 28.5-11.5T280-280q0-17-11.5-28.5T240-320q-17 0-28.5 11.5T200-280q0 17 11.5 28.5T240-240ZM120-360h32q17-18 39-29t49-11q27 0 49 11t39 29h272v-360H120v360Zm600 120q17 0 28.5-11.5T760-280q0-17-11.5-28.5T720-320q-17 0-28.5 11.5T680-280q0 17 11.5 28.5T720-240Zm-40-200h170l-90-120h-80v120ZM360-540Z\"\/>\n        <\/svg> \n    <\/span>\n    <span>Order now to receive in <span id=\"delivery-dates\" style=\"font-weight: bold;\"><\/span><\/span>\n<\/div>\n\n<script>\n    document.addEventListener('DOMContentLoaded', function() {\n        var currentDate = new Date();\n\n        var minDeliveryDate = new Date();\n        minDeliveryDate.setDate(currentDate.getDate() + 5); \/\/ 5 days from now\n\n        var maxDeliveryDate = new Date();\n        maxDeliveryDate.setDate(currentDate.getDate() + 7); \/\/ 7 days from now\n\n        var formatDate = function(date) {\n            var monthNames = [\"January\", \"February\", \"March\", \"April\", \"May\", \"June\",\n              \"July\", \"August\", \"September\", \"October\", \"November\", \"December\"\n            ];\n            var day = date.getDate();\n            var monthIndex = date.getMonth();\n            return monthNames[monthIndex] + \" \" + day;\n        };\n\n        var deliverySpan = document.getElementById('delivery-dates');\n        deliverySpan.textContent = formatDate(minDeliveryDate) + ' - ' + formatDate(maxDeliveryDate);\n    });\n<\/script>"}},"feature_icon_99BxnX":{"type":"feature_icon","settings":{"applied_collections":[],"heading_size":110,"icon_size":30,"border_column":"none","content_alignment":"start","background_color_light":"rgba(0,0,0,0)","heading_light":"rgba(0,0,0,0)","text_light":"rgba(0,0,0,0)","line_border_light":"rgba(0,0,0,0)","color_icon_light":"rgba(0,0,0,0)","background_color_dark":"rgba(0,0,0,0)","heading_dark":"rgba(0,0,0,0)","text_dark":"rgba(0,0,0,0)","line_border_dark":"rgba(0,0,0,0)","color_icon_dark":"rgba(0,0,0,0)","icon_1":"none","another_icon_1":"","custom_icon_1":"","title_1":"ICON","text_1":"<ul><li>Anti-Aging<\/li><li>Firms<\/li><li>Moisturizes<\/li><\/ul>","link_1":"","open_new_window_1":false,"icon_2":"none","another_icon_2":"","custom_icon_2":"","title_2":"ICON","text_2":"<ul><li>Mature<\/li><li>Dry<\/li><li>Sensitive<\/li><\/ul>","link_2":"","open_new_window_2":false,"icon_3":"none","another_icon_3":"","custom_icon_3":"","title_3":"ICON","text_3":"<p>Fragrance-free<\/p>","link_3":"","open_new_window_3":false,"icon_4":"truck","another_icon_4":"","custom_icon_4":"","title_4":"","text_4":"","link_4":"","open_new_window_4":false,"icon_5":"truck","another_icon_5":"","custom_icon_5":"","title_5":"","text_5":"","link_5":"","open_new_window_5":false,"icon_6":"truck","another_icon_6":"","custom_icon_6":"","title_6":"","text_6":"","link_6":"","open_new_window_6":false}},"description":{"type":"description","settings":{"show_in_tab":true,"open_by_default":true,"make_content_center":false,"icon":"none","another_icon":"","custom_icon":"","heading":"Description","number_of_lines_shown":"none","read_more_label":"Read more","see_less_label":"See less"}},"sticky-atc":{"type":"sticky_add_to_cart","settings":{"desktop_display_type":"full_width","show_quantity_selector":false}}},"block_order":["html_k6nFcL","product_name_xkPbAa","price","html_bm7Qqj","html_riyhhe","quantity_selector","gift_wrapping_EK3NQn","buy_buttons","html_DK78JD","feature_icon_99BxnX","description","sticky-atc"],"settings":{"enable_sticky_image":true,"show_product_name":false,"title_size":100,"heading_tag":"h1","show_vendor":false,"link_vendor":false,"make_content_center":false,"desktop_layout":"left","desktop_media_layout":"thumbnail_slider","show_arrow_button":true,"mobile_media_size":"75%","show_thumnail_mobile":true,"image_ratio":"3\/4","thumbnail_position":"horizontal","enable_image_zoom":false,"zoom_effect":"enlarge","enable_video_autoplay":false,"enable_video_loop":false,"show_first_image_avaiable":true,"show_media_with_variant_selected":false,"option_to_classify_variant_media":"","enable_microdata":false,"show_breadcrumbs":false,"show_breadcrumbs_border":false,"full_width_breadcrumb":false,"desktop_content_alignment":"text-center","mobile_content_alignment":"text-center","background_color_light":"rgba(0,0,0,0)","text_color_light":"rgba(0,0,0,0)","textlink_color_light":"rgba(0,0,0,0)","background_color_dark":"rgba(0,0,0,0)","text_color_dark":"rgba(0,0,0,0)","textlink_color_dark":"rgba(0,0,0,0)","full_width":true,"spacing_col":"small","padding_top":60,"padding_bottom":40,"padding_top_mobile":40,"padding_bottom_mobile":28}},"product-recommendations":{"type":"product-recommendations","disabled":true,"settings":{"heading":"You May Also Like...","highlight_type":"underline","heading_size":100,"heading_tag":"h2","heading_alignment":"center","products_to_show":5,"background_color_light":"","background_color_dark":"","show_vendor":false,"show_rating":true,"show_quickview":true,"enable_carousel_desktop":false,"enable_swiper_mobile":true,"columns_desktop":5,"full_width":true,"show_section_divider":false,"spacing":28,"padding_top":56,"padding_bottom":88,"columns_mobile":"1","show_section_divider_mobile":false,"spacing_mobile":16,"padding_top_mobile":0,"padding_bottom_mobile":20}},"scrolling_banner_FihEbF":{"type":"scrolling-banner","blocks":{"text_DYJtQn":{"type":"text","settings":{"text":"Talk about your brand","highlight_type":"underline","text_size":100,"text_color":"primary","spacing_left":0,"spacing_right":0,"spacing_left_mobile":0,"spacing_right_mobile":0}}},"block_order":["text_DYJtQn"],"name":"t:sections.scrolling_promotion.presets.name","settings":{"show_border":true,"speed":20,"direction":"right","pause_hover":true,"bg_light":"#2f6fed","color_text_light":"#ffffff","color_text_light_2":"rgba(0,0,0,0)","color_heading_highlight_light":"rgba(0,0,0,0)","bg_dark":"rgba(0,0,0,0)","color_text_dark":"rgba(0,0,0,0)","color_text_dark_2":"rgba(0,0,0,0)","color_heading_highlight_dark":"rgba(0,0,0,0)","space_block":110,"padding_top":28,"padding_bottom":28,"space_block_mobile":110,"padding_top_mobile":28,"padding_bottom_mobile":28}},"image_with_text_pny4DB":{"type":"image-with-text","blocks":{"heading_pf9z9Y":{"type":"heading","settings":{"subheading":"Example subheading","heading":"Image with text","highlight_type":"underline","heading_base_size":100,"heading_tag":"h2","text":"<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>","number_of_lines_shown":"none","read_more_label":"Read more","see_less_label":"See less","heading_light":"rgba(0,0,0,0)","text_light":"rgba(0,0,0,0)","color_heading_highlight_light":"rgba(0,0,0,0)","heading_dark":"rgba(0,0,0,0)","text_dark":"rgba(0,0,0,0)","color_heading_highlight_dark":"rgba(0,0,0,0)"}},"button_DcFckr":{"type":"button","settings":{"button_label":"Button label","button_link":"","open_new_window":false,"show_button_style":"primary","button_light":"rgba(0,0,0,0)","button_text_light":"rgba(0,0,0,0)","button_hover_light":"rgba(0,0,0,0)","button_text_hover_light":"rgba(0,0,0,0)","secondary_button_light":"rgba(0,0,0,0)","secondary_button_text_light":"rgba(0,0,0,0)","colors_text_link":"rgba(0,0,0,0)","button_dark":"rgba(0,0,0,0)","button_text_dark":"rgba(0,0,0,0)","button_hover_dark":"rgba(0,0,0,0)","button_text_hover_dark":"rgba(0,0,0,0)","secondary_button_dark":"rgba(0,0,0,0)","secondary_button_text_dark":"rgba(0,0,0,0)","colors_text_link_dark":"rgba(0,0,0,0)"}}},"block_order":["heading_pf9z9Y","button_DcFckr"],"name":"t:sections.image-with-text.presets.name","settings":{"show_sound_control":false,"video_url":"","video_alt_text":"","enable_video_autoplay":false,"desktop_height":"550px","mobile_height":"400px","desktop_image_width":"large","image_layout":"normal","image_corner_radius":0,"content_layout":"overlap","spacing_image":false,"text_position":"center","text_alignment":"start","background_color_light":"rgba(0,0,0,0)","background_color_dark":"rgba(0,0,0,0)","line_border":"dashed","icon_position":"col","icon_size":45,"alignment":"center","columns_desktop":4,"columns_mobile":"2","heading_color_light":"rgba(0,0,0,0)","text_color_light":"rgba(0,0,0,0)","line_border_light":"rgba(0,0,0,0)","icon_color_light":"rgba(0,0,0,0)","heading_color_dark":"rgba(0,0,0,0)","text_color_dark":"rgba(0,0,0,0)","line_border_dark":"rgba(0,0,0,0)","icon_color_dark":"rgba(0,0,0,0)","image_alignment":"left","full_width":false,"padding_full_width":false,"top_padding":0,"bottom_padding":0,"image_alignment_mobile":"left","full_width_mobile":false,"top_padding_mobile":0,"bottom_padding_mobile":0}},"scrolling_banner_cXMWJF":{"type":"scrolling-banner","blocks":{"text_pycbn8":{"type":"text","settings":{"text":"Talk about your brand","highlight_type":"underline","text_size":100,"text_color":"primary","spacing_left":0,"spacing_right":0,"spacing_left_mobile":0,"spacing_right_mobile":0}}},"block_order":["text_pycbn8"],"name":"t:sections.scrolling_promotion.presets.name","settings":{"show_border":true,"speed":20,"direction":"right","pause_hover":true,"bg_light":"#2f6fed","color_text_light":"#ffffff","color_text_light_2":"rgba(0,0,0,0)","color_heading_highlight_light":"rgba(0,0,0,0)","bg_dark":"rgba(0,0,0,0)","color_text_dark":"rgba(0,0,0,0)","color_text_dark_2":"rgba(0,0,0,0)","color_heading_highlight_dark":"rgba(0,0,0,0)","space_block":110,"padding_top":28,"padding_bottom":28,"space_block_mobile":110,"padding_top_mobile":28,"padding_bottom_mobile":28}},"image_with_text_3DwQRt":{"type":"image-with-text","blocks":{"heading_phxWYV":{"type":"heading","settings":{"subheading":"Example subheading","heading":"Image with text","highlight_type":"underline","heading_base_size":100,"heading_tag":"h2","text":"<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>","number_of_lines_shown":"none","read_more_label":"Read more","see_less_label":"See less","heading_light":"rgba(0,0,0,0)","text_light":"rgba(0,0,0,0)","color_heading_highlight_light":"rgba(0,0,0,0)","heading_dark":"rgba(0,0,0,0)","text_dark":"rgba(0,0,0,0)","color_heading_highlight_dark":"rgba(0,0,0,0)"}},"button_zpWWi9":{"type":"button","settings":{"button_label":"Button label","button_link":"","open_new_window":false,"show_button_style":"primary","button_light":"rgba(0,0,0,0)","button_text_light":"rgba(0,0,0,0)","button_hover_light":"rgba(0,0,0,0)","button_text_hover_light":"rgba(0,0,0,0)","secondary_button_light":"rgba(0,0,0,0)","secondary_button_text_light":"rgba(0,0,0,0)","colors_text_link":"rgba(0,0,0,0)","button_dark":"rgba(0,0,0,0)","button_text_dark":"rgba(0,0,0,0)","button_hover_dark":"rgba(0,0,0,0)","button_text_hover_dark":"rgba(0,0,0,0)","secondary_button_dark":"rgba(0,0,0,0)","secondary_button_text_dark":"rgba(0,0,0,0)","colors_text_link_dark":"rgba(0,0,0,0)"}}},"block_order":["heading_phxWYV","button_zpWWi9"],"name":"t:sections.image-with-text.presets.name","settings":{"show_sound_control":false,"video_url":"","video_alt_text":"","enable_video_autoplay":false,"desktop_height":"550px","mobile_height":"400px","desktop_image_width":"large","image_layout":"normal","image_corner_radius":0,"content_layout":"overlap","spacing_image":false,"text_position":"center","text_alignment":"start","background_color_light":"rgba(0,0,0,0)","background_color_dark":"rgba(0,0,0,0)","line_border":"dashed","icon_position":"col","icon_size":45,"alignment":"center","columns_desktop":4,"columns_mobile":"2","heading_color_light":"rgba(0,0,0,0)","text_color_light":"rgba(0,0,0,0)","line_border_light":"rgba(0,0,0,0)","icon_color_light":"rgba(0,0,0,0)","heading_color_dark":"rgba(0,0,0,0)","text_color_dark":"rgba(0,0,0,0)","line_border_dark":"rgba(0,0,0,0)","icon_color_dark":"rgba(0,0,0,0)","image_alignment":"left","full_width":false,"padding_full_width":false,"top_padding":0,"bottom_padding":0,"image_alignment_mobile":"left","full_width_mobile":false,"top_padding_mobile":0,"bottom_padding_mobile":0}},"faq_byLxM7":{"type":"faq","blocks":{"frequently_asked_question_tdwyep":{"type":"frequently_asked_question","settings":{"icon":"heart","another_icon":"","custom_icon":"","heading":"Frequently asked question","row_content":"<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"}},"frequently_asked_question_qKUeCx":{"type":"frequently_asked_question","settings":{"icon":"heart","another_icon":"","custom_icon":"","heading":"Frequently asked question","row_content":"<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"}},"frequently_asked_question_p9THCx":{"type":"frequently_asked_question","settings":{"icon":"heart","another_icon":"","custom_icon":"","heading":"Frequently asked question","row_content":"<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"}},"frequently_asked_question_KdBJC7":{"type":"frequently_asked_question","settings":{"icon":"heart","another_icon":"","custom_icon":"","heading":"Frequently asked question","row_content":"<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"}}},"block_order":["frequently_asked_question_tdwyep","frequently_asked_question_qKUeCx","frequently_asked_question_p9THCx","frequently_asked_question_KdBJC7"],"name":"t:sections.question_and_answer.presets.name","settings":{"heading":"FAQs","highlight_type":"underline","heading_size":100,"heading_tag":"h2","heading_alignment":"center","show_border":false,"row_background":false,"collapsible":true,"show_view_all":true,"view_all_position":"top","button_link":"","open_new_window":false,"background_color_light":"rgba(0,0,0,0)","background_color_dark":"rgba(0,0,0,0)","enable_microdata_schema":false,"desktop_layout":"1","image_alignment":"left","desktop_height":"400px","show_section_divider":false,"make_full_page_width":false,"padding_top":28,"padding_bottom":28,"image_alignment_mobile":"left","mobile_height":"250px","show_section_divider_mobile":false,"padding_top_mobile":28,"padding_bottom_mobile":28}},"1774373014960824ac":{"type":"apps","blocks":{"judge_me_reviews_review_widget_RzTTqp":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{"review_data":"real_data","max_width":1200,"show_shop_reviews":false,"empty_state":"empty_widget"}}},"block_order":["judge_me_reviews_review_widget_RzTTqp"],"settings":{"include_margins":true}},"331e6fca-2947-4a19-89c5-9396be0d666a":{"type":"multicolumn","blocks":{"template--21918975852859__331e6fca-2947-4a19-89c5-9396be0d666a-column-3":{"type":"column","settings":{"icon":"truck","another_icon":"","custom_icon":"","title":"Delivery All Over Lebanon","highlight_type":"underline","title_link":"","open_new_window":false,"heading_size":100,"text":""}},"template--21918975852859__331e6fca-2947-4a19-89c5-9396be0d666a-column-4":{"type":"column","settings":{"icon":"telephone","another_icon":"","custom_icon":"","title":"24\/7 support","highlight_type":"underline","title_link":"","open_new_window":false,"heading_size":100,"text":""}}},"block_order":["template--21918975852859__331e6fca-2947-4a19-89c5-9396be0d666a-column-3","template--21918975852859__331e6fca-2947-4a19-89c5-9396be0d666a-column-4"],"settings":{"title":"","highlight_type":"underline","heading_size":100,"heading_tag":"h2","secondary_background":"column","border_column":"none","column_content_alignment":"center","icon_position":"above","icon_size":45,"enable_desktop_slider":false,"swiper_on_mobile":true,"auto_play":true,"change_bar_every":5,"background_color_light":"#2f6fed","heading_light":"#ffffff","text_light":"#ffffff","color_heading_highlight_light":"rgba(0,0,0,0)","line_border_light":"#ffffff","color_icon_light":"#ffffff","background_color_dark":"#ffffff","heading_dark":"rgba(0,0,0,0)","text_dark":"#ffffff","color_heading_highlight_dark":"rgba(0,0,0,0)","line_border_dark":"#ffffff","color_icon_dark":"#ffffff","column_layout_desktop":"lg:w-1\/4","section_height_desktop":"md:py-7","spacing_desktop":28,"full_width":false,"padding_full_width":false,"show_section_divider":false,"padding_top":28,"padding_bottom":28,"column_layout_mobile":"w-full","section_height_mobile":"py-5","spacing_mobile":16,"full_width_mobile":true,"show_section_divider_mobile":false,"padding_top_mobile":20,"padding_bottom_mobile":20}}},"order":["main","product-recommendations","scrolling_banner_FihEbF","image_with_text_pny4DB","scrolling_banner_cXMWJF","image_with_text_3DwQRt","faq_byLxM7","1774373014960824ac","331e6fca-2947-4a19-89c5-9396be0d666a"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "html_k6nFcL": {
+          "type": "html",
+          "settings": {
+            "custom_html": "<style>\n.star-review-wrapper {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  flex-shrink: 0;\n}\n\n.star-icons {\n  display: flex;\n  flex-direction: row;\n  gap: 4px; /* space between stars */\n}\n\n.star-icons svg {\n  width: 20px;\n  height: 20px;\n  fill: #2F6FED; /* star color */\n}\n\n.review-text {\n  font-size: 16px;\n  font-weight: 500;\n  color: #333;\n  white-space: nowrap;\n}\n\n/* Mobile fix */\n@media (max-width: 480px) {\n  .star-review-wrapper {\n    flex-direction: row;\n    justify-content: center;\n  }\n}\n</style>\n\n<div class=\"star-review-wrapper\">\n  \n  <div class=\"star-icons\">\n    <!-- 5 Stars -->\n    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\">\n      <path d=\"M12 17.27L18.18 21l-1.64-7.03L22 \n      9.24l-7.19-.61L12 2 9.19 8.63 2 \n      9.24l5.46 4.73L5.82 21z\"/>\n    </svg>\n\n    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\">\n      <path d=\"M12 17.27L18.18 21l-1.64-7.03L22 \n      9.24l-7.19-.61L12 2 9.19 8.63 2 \n      9.24l5.46 4.73L5.82 21z\"/>\n    </svg>\n\n    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\">\n      <path d=\"M12 17.27L18.18 21l-1.64-7.03L22 \n      9.24l-7.19-.61L12 2 9.19 8.63 2 \n      9.24l5.46 4.73L5.82 21z\"/>\n    </svg>\n\n    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\">\n      <path d=\"M12 17.27L18.18 21l-1.64-7.03L22 \n      9.24l-7.19-.61L12 2 9.19 8.63 2 \n      9.24l5.46 4.73L5.82 21z\"/>\n    </svg>\n\n    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\">\n      <path d=\"M12 17.27L18.18 21l-1.64-7.03L22 \n      9.24l-7.19-.61L12 2 9.19 8.63 2 \n      9.24l5.46 4.73L5.82 21z\"/>\n    </svg>\n  </div>\n\n  <div class=\"review-text\">\n    <strong>5</strong> by <strong>124+</strong> Customers\n  </div>\n\n</div>"
+          }
+        },
+        "product_name_xkPbAa": {
+          "type": "product_name",
+          "settings": {
+            "title_size": 100,
+            "heading_tag": "h1"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_and_shipping": false,
+            "text_size_price": 70
+          }
+        },
+        "html_bm7Qqj": {
+          "type": "html",
+          "settings": {
+            "custom_html": "<section class=\"sale-timer\" aria-label=\"Sale countdown timer\">\n  <style>\n    .sale-timer{\n      width:100%;\n      padding:22px 12px;\n      display:flex;\n      justify-content:center;\n      background:##ff85d0;\n      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n    }\n    .sale-timer__wrap{\n      text-align:center;\n    }\n    .sale-timer__label{\n      font-size:24px;\n      font-weight:500;\n      color:#111;\n      margin:0 0 14px 0;\n      line-height:1.1;\n    }\n\n    .sale-timer__row{\n      display:flex;\n      align-items:center;\n      justify-content:center;\n      gap:10px;\n    }\n\n    .sale-timer__box{\n      width:88px;\n      height:68px;\n      background:#2F6FED;\n      color:#fff;\n      border-radius:6px;\n      display:flex;\n      align-items:center;\n      justify-content:center;\n      font-size:34px;\n      font-weight:700;\n      letter-spacing:1px;\n      font-variant-numeric: tabular-nums;\n    }\n\n    .sale-timer__colon{\n      font-size:32px;\n      font-weight:700;\n      color:#ff2a2a;\n      line-height:1;\n      transform: translateY(-1px);\n      user-select:none;\n    }\n\n    @media (max-width:420px){\n      .sale-timer__label{ font-size:20px; }\n      .sale-timer__box{ width:72px; height:58px; font-size:30px; }\n      .sale-timer__colon{ font-size:28px; }\n      .sale-timer__row{ gap:8px; }\n    }\n  </style>\n\n  <div class=\"sale-timer__wrap\">\n    <div class=\"sale-timer__label\">Hurry! Sale ends in</div>\n\n    <div class=\"sale-timer__row\" role=\"timer\" aria-live=\"polite\">\n      <div class=\"sale-timer__box\" id=\"st-hours\">00</div>\n      <div class=\"sale-timer__colon\">:</div>\n      <div class=\"sale-timer__box\" id=\"st-mins\">00</div>\n      <div class=\"sale-timer__colon\">:</div>\n      <div class=\"sale-timer__box\" id=\"st-secs\">00</div>\n    </div>\n  </div>\n\n  <script>\n    (function () {\n      const durationHours = 12; // change if needed\n      const endAt = Date.now() + durationHours * 60 * 60 * 1000;\n\n      const h = document.getElementById(\"st-hours\");\n      const m = document.getElementById(\"st-mins\");\n      const s = document.getElementById(\"st-secs\");\n\n      const pad = n => String(n).padStart(2, \"0\");\n\n      function update(){\n        let diff = endAt - Date.now();\n        if(diff < 0) diff = 0;\n\n        const total = Math.floor(diff / 1000);\n        h.textContent = pad(Math.floor(total / 3600));\n        m.textContent = pad(Math.floor((total % 3600) / 60));\n        s.textContent = pad(total % 60);\n\n        if(diff === 0) clearInterval(timer);\n      }\n\n      update();\n      const timer = setInterval(update, 1000);\n    })();\n  </script>\n</section>"
+          }
+        },
+        "html_riyhhe": {
+          "type": "html",
+          "settings": {
+            "custom_html": "<div style=\"padding: 12px; text-align: left; background-color: #f9f9f9; font-size: 15px; border-radius: 12px; margin-top: 10px; margin-bottom: 10px; line-height: 1.6;\">\n<span style=\"font-weight: bold;\">😌 Relax & Refresh Instantly</span> – Soothe tired eyes and unwind after long screen time or a busy day.<br><br>\n<span style=\"font-weight: bold;\">🔴 Advanced Light Therapy</span> – Gentle red light helps support a brighter, more youthful-looking eye area.<br><br>\n<span style=\"font-weight: bold;\">✨ Reduce Puffiness & Dark Circles</span> – Enjoy a smoother, revitalized appearance with regular use.\n</div>"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "gift_wrapping_EK3NQn": {
+          "type": "gift_wrapping",
+          "settings": {
+            "text_gift": "",
+            "color_icon_light": "rgba(0,0,0,0)",
+            "color_icon_dark": "rgba(0,0,0,0)"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_button_style": "primary",
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true,
+            "pickup_availability": false,
+            "hide_when_pre_order": false,
+            "preorder_button_label": "Pre-order",
+            "preorder_message": "<p>This product will be available for sale in 2 weeks, but you can pre-order now to receive 10% discount!</p>",
+            "preorder_show_dynamic_button": false,
+            "show_background": false,
+            "box_type": "square",
+            "background_color_light": "rgba(0,0,0,0)",
+            "message_color_light": "rgba(0,0,0,0)",
+            "background_color_dark": "rgba(0,0,0,0)",
+            "message_color_dark": "rgba(0,0,0,0)",
+            "button_light": "rgba(0,0,0,0)",
+            "button_text_light": "rgba(0,0,0,0)",
+            "button_hover_light": "rgba(0,0,0,0)",
+            "button_text_hover_light": "rgba(0,0,0,0)",
+            "secondary_button_light": "rgba(0,0,0,0)",
+            "secondary_button_text_light": "rgba(0,0,0,0)",
+            "button_dark": "rgba(0,0,0,0)",
+            "button_text_dark": "rgba(0,0,0,0)",
+            "button_hover_dark": "rgba(0,0,0,0)",
+            "button_text_hover_dark": "rgba(0,0,0,0)",
+            "secondary_button_dark": "rgba(0,0,0,0)",
+            "secondary_button_text_dark": "rgba(0,0,0,0)"
+          }
+        },
+        "html_DK78JD": {
+          "type": "html",
+          "settings": {
+            "custom_html": "<div style=\"padding: 12px; text-align: left; background-color: #f5f5f5; font-size: 15px; border-radius: 13px; margin-top: 12px; margin-bottom: 12px; display: flex; align-items: center;\"> \n    <span class=\"em\" style=\"margin-right: 8px;\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\" width=\"24px\" fill=\"#545454\">\n            <path d=\"M240-160q-50 0-85-35t-35-85H40v-440q0-33 23.5-56.5T120-800h560v160h120l120 160v200h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85H360q0 50-35 85t-85 35Zm0-80q17 0 28.5-11.5T280-280q0-17-11.5-28.5T240-320q-17 0-28.5 11.5T200-280q0 17 11.5 28.5T240-240ZM120-360h32q17-18 39-29t49-11q27 0 49 11t39 29h272v-360H120v360Zm600 120q17 0 28.5-11.5T760-280q0-17-11.5-28.5T720-320q-17 0-28.5 11.5T680-280q0 17 11.5 28.5T720-240Zm-40-200h170l-90-120h-80v120ZM360-540Z\"/>\n        </svg> \n    </span>\n    <span>Order now to receive in <span id=\"delivery-dates\" style=\"font-weight: bold;\"></span></span>\n</div>\n\n<script>\n    document.addEventListener('DOMContentLoaded', function() {\n        var currentDate = new Date();\n\n        var minDeliveryDate = new Date();\n        minDeliveryDate.setDate(currentDate.getDate() + 5); // 5 days from now\n\n        var maxDeliveryDate = new Date();\n        maxDeliveryDate.setDate(currentDate.getDate() + 7); // 7 days from now\n\n        var formatDate = function(date) {\n            var monthNames = [\"January\", \"February\", \"March\", \"April\", \"May\", \"June\",\n              \"July\", \"August\", \"September\", \"October\", \"November\", \"December\"\n            ];\n            var day = date.getDate();\n            var monthIndex = date.getMonth();\n            return monthNames[monthIndex] + \" \" + day;\n        };\n\n        var deliverySpan = document.getElementById('delivery-dates');\n        deliverySpan.textContent = formatDate(minDeliveryDate) + ' - ' + formatDate(maxDeliveryDate);\n    });\n</script>"
+          }
+        },
+        "feature_icon_99BxnX": {
+          "type": "feature_icon",
+          "settings": {
+            "applied_collections": [],
+            "heading_size": 110,
+            "icon_size": 30,
+            "border_column": "none",
+            "content_alignment": "start",
+            "background_color_light": "rgba(0,0,0,0)",
+            "heading_light": "rgba(0,0,0,0)",
+            "text_light": "rgba(0,0,0,0)",
+            "line_border_light": "rgba(0,0,0,0)",
+            "color_icon_light": "rgba(0,0,0,0)",
+            "background_color_dark": "rgba(0,0,0,0)",
+            "heading_dark": "rgba(0,0,0,0)",
+            "text_dark": "rgba(0,0,0,0)",
+            "line_border_dark": "rgba(0,0,0,0)",
+            "color_icon_dark": "rgba(0,0,0,0)",
+            "icon_1": "none",
+            "another_icon_1": "",
+            "custom_icon_1": "",
+            "title_1": "ICON",
+            "text_1": "<ul><li>Anti-Aging</li><li>Firms</li><li>Moisturizes</li></ul>",
+            "link_1": "",
+            "open_new_window_1": false,
+            "icon_2": "none",
+            "another_icon_2": "",
+            "custom_icon_2": "",
+            "title_2": "ICON",
+            "text_2": "<ul><li>Mature</li><li>Dry</li><li>Sensitive</li></ul>",
+            "link_2": "",
+            "open_new_window_2": false,
+            "icon_3": "none",
+            "another_icon_3": "",
+            "custom_icon_3": "",
+            "title_3": "ICON",
+            "text_3": "<p>Fragrance-free</p>",
+            "link_3": "",
+            "open_new_window_3": false,
+            "icon_4": "truck",
+            "another_icon_4": "",
+            "custom_icon_4": "",
+            "title_4": "",
+            "text_4": "",
+            "link_4": "",
+            "open_new_window_4": false,
+            "icon_5": "truck",
+            "another_icon_5": "",
+            "custom_icon_5": "",
+            "title_5": "",
+            "text_5": "",
+            "link_5": "",
+            "open_new_window_5": false,
+            "icon_6": "truck",
+            "another_icon_6": "",
+            "custom_icon_6": "",
+            "title_6": "",
+            "text_6": "",
+            "link_6": "",
+            "open_new_window_6": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "show_in_tab": true,
+            "open_by_default": true,
+            "make_content_center": false,
+            "icon": "none",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Description",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less"
+          }
+        },
+        "sticky-atc": {
+          "type": "sticky_add_to_cart",
+          "settings": {
+            "desktop_display_type": "full_width",
+            "show_quantity_selector": false
+          }
+        }
+      },
+      "block_order": [
+        "html_k6nFcL",
+        "product_name_xkPbAa",
+        "price",
+        "html_bm7Qqj",
+        "html_riyhhe",
+        "quantity_selector",
+        "gift_wrapping_EK3NQn",
+        "buy_buttons",
+        "html_DK78JD",
+        "feature_icon_99BxnX",
+        "description",
+        "sticky-atc"
+      ],
+      "settings": {
+        "enable_sticky_image": true,
+        "show_product_name": false,
+        "title_size": 100,
+        "heading_tag": "h1",
+        "show_vendor": false,
+        "link_vendor": false,
+        "make_content_center": false,
+        "desktop_layout": "left",
+        "desktop_media_layout": "thumbnail_slider",
+        "show_arrow_button": true,
+        "mobile_media_size": "75%",
+        "show_thumnail_mobile": true,
+        "image_ratio": "3/4",
+        "thumbnail_position": "horizontal",
+        "enable_image_zoom": false,
+        "zoom_effect": "enlarge",
+        "enable_video_autoplay": false,
+        "enable_video_loop": false,
+        "show_first_image_avaiable": true,
+        "show_media_with_variant_selected": false,
+        "option_to_classify_variant_media": "",
+        "enable_microdata": false,
+        "show_breadcrumbs": false,
+        "show_breadcrumbs_border": false,
+        "full_width_breadcrumb": false,
+        "desktop_content_alignment": "text-center",
+        "mobile_content_alignment": "text-center",
+        "background_color_light": "rgba(0,0,0,0)",
+        "text_color_light": "rgba(0,0,0,0)",
+        "textlink_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "text_color_dark": "rgba(0,0,0,0)",
+        "textlink_color_dark": "rgba(0,0,0,0)",
+        "full_width": true,
+        "spacing_col": "small",
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 28
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You May Also Like...",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "products_to_show": 5,
+        "background_color_light": "",
+        "background_color_dark": "",
+        "show_vendor": false,
+        "show_rating": true,
+        "show_quickview": true,
+        "enable_carousel_desktop": false,
+        "enable_swiper_mobile": true,
+        "columns_desktop": 5,
+        "full_width": true,
+        "show_section_divider": false,
+        "spacing": 28,
+        "padding_top": 56,
+        "padding_bottom": 88,
+        "columns_mobile": "1",
+        "show_section_divider_mobile": false,
+        "spacing_mobile": 16,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "scrolling_banner_FihEbF": {
+      "type": "scrolling-banner",
+      "blocks": {
+        "text_DYJtQn": {
+          "type": "text",
+          "settings": {
+            "text": "Talk about your brand",
+            "highlight_type": "underline",
+            "text_size": 100,
+            "text_color": "primary",
+            "spacing_left": 0,
+            "spacing_right": 0,
+            "spacing_left_mobile": 0,
+            "spacing_right_mobile": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_DYJtQn"
+      ],
+      "disabled": true,
+      "name": "t:sections.scrolling_promotion.presets.name",
+      "settings": {
+        "show_border": true,
+        "speed": 20,
+        "direction": "right",
+        "pause_hover": true,
+        "bg_light": "#2f6fed",
+        "color_text_light": "#ffffff",
+        "color_text_light_2": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "bg_dark": "rgba(0,0,0,0)",
+        "color_text_dark": "rgba(0,0,0,0)",
+        "color_text_dark_2": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "space_block": 110,
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "space_block_mobile": 110,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    },
+    "image_with_text_pny4DB": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_pf9z9Y": {
+          "type": "heading",
+          "settings": {
+            "subheading": "Example subheading",
+            "heading": "Image with text",
+            "highlight_type": "underline",
+            "heading_base_size": 100,
+            "heading_tag": "h2",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less",
+            "heading_light": "rgba(0,0,0,0)",
+            "text_light": "rgba(0,0,0,0)",
+            "color_heading_highlight_light": "rgba(0,0,0,0)",
+            "heading_dark": "rgba(0,0,0,0)",
+            "text_dark": "rgba(0,0,0,0)",
+            "color_heading_highlight_dark": "rgba(0,0,0,0)"
+          }
+        },
+        "button_DcFckr": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary",
+            "button_light": "rgba(0,0,0,0)",
+            "button_text_light": "rgba(0,0,0,0)",
+            "button_hover_light": "rgba(0,0,0,0)",
+            "button_text_hover_light": "rgba(0,0,0,0)",
+            "secondary_button_light": "rgba(0,0,0,0)",
+            "secondary_button_text_light": "rgba(0,0,0,0)",
+            "colors_text_link": "rgba(0,0,0,0)",
+            "button_dark": "rgba(0,0,0,0)",
+            "button_text_dark": "rgba(0,0,0,0)",
+            "button_hover_dark": "rgba(0,0,0,0)",
+            "button_text_hover_dark": "rgba(0,0,0,0)",
+            "secondary_button_dark": "rgba(0,0,0,0)",
+            "secondary_button_text_dark": "rgba(0,0,0,0)",
+            "colors_text_link_dark": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pf9z9Y",
+        "button_DcFckr"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "show_sound_control": false,
+        "video_url": "",
+        "video_alt_text": "",
+        "enable_video_autoplay": false,
+        "desktop_height": "550px",
+        "mobile_height": "400px",
+        "desktop_image_width": "large",
+        "image_layout": "normal",
+        "image_corner_radius": 0,
+        "content_layout": "overlap",
+        "spacing_image": false,
+        "text_position": "center",
+        "text_alignment": "start",
+        "background_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "line_border": "dashed",
+        "icon_position": "col",
+        "icon_size": 45,
+        "alignment": "center",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "heading_color_light": "rgba(0,0,0,0)",
+        "text_color_light": "rgba(0,0,0,0)",
+        "line_border_light": "rgba(0,0,0,0)",
+        "icon_color_light": "rgba(0,0,0,0)",
+        "heading_color_dark": "rgba(0,0,0,0)",
+        "text_color_dark": "rgba(0,0,0,0)",
+        "line_border_dark": "rgba(0,0,0,0)",
+        "icon_color_dark": "rgba(0,0,0,0)",
+        "image_alignment": "left",
+        "full_width": false,
+        "padding_full_width": false,
+        "top_padding": 0,
+        "bottom_padding": 0,
+        "image_alignment_mobile": "left",
+        "full_width_mobile": false,
+        "top_padding_mobile": 0,
+        "bottom_padding_mobile": 0
+      }
+    },
+    "scrolling_banner_cXMWJF": {
+      "type": "scrolling-banner",
+      "blocks": {
+        "text_pycbn8": {
+          "type": "text",
+          "settings": {
+            "text": "Talk about your brand",
+            "highlight_type": "underline",
+            "text_size": 100,
+            "text_color": "primary",
+            "spacing_left": 0,
+            "spacing_right": 0,
+            "spacing_left_mobile": 0,
+            "spacing_right_mobile": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_pycbn8"
+      ],
+      "disabled": true,
+      "name": "t:sections.scrolling_promotion.presets.name",
+      "settings": {
+        "show_border": true,
+        "speed": 20,
+        "direction": "right",
+        "pause_hover": true,
+        "bg_light": "#2f6fed",
+        "color_text_light": "#ffffff",
+        "color_text_light_2": "rgba(0,0,0,0)",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "bg_dark": "rgba(0,0,0,0)",
+        "color_text_dark": "rgba(0,0,0,0)",
+        "color_text_dark_2": "rgba(0,0,0,0)",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "space_block": 110,
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "space_block_mobile": 110,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    },
+    "image_with_text_3DwQRt": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_phxWYV": {
+          "type": "heading",
+          "settings": {
+            "subheading": "Example subheading",
+            "heading": "Image with text",
+            "highlight_type": "underline",
+            "heading_base_size": 100,
+            "heading_tag": "h2",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less",
+            "heading_light": "rgba(0,0,0,0)",
+            "text_light": "rgba(0,0,0,0)",
+            "color_heading_highlight_light": "rgba(0,0,0,0)",
+            "heading_dark": "rgba(0,0,0,0)",
+            "text_dark": "rgba(0,0,0,0)",
+            "color_heading_highlight_dark": "rgba(0,0,0,0)"
+          }
+        },
+        "button_zpWWi9": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "open_new_window": false,
+            "show_button_style": "primary",
+            "button_light": "rgba(0,0,0,0)",
+            "button_text_light": "rgba(0,0,0,0)",
+            "button_hover_light": "rgba(0,0,0,0)",
+            "button_text_hover_light": "rgba(0,0,0,0)",
+            "secondary_button_light": "rgba(0,0,0,0)",
+            "secondary_button_text_light": "rgba(0,0,0,0)",
+            "colors_text_link": "rgba(0,0,0,0)",
+            "button_dark": "rgba(0,0,0,0)",
+            "button_text_dark": "rgba(0,0,0,0)",
+            "button_hover_dark": "rgba(0,0,0,0)",
+            "button_text_hover_dark": "rgba(0,0,0,0)",
+            "secondary_button_dark": "rgba(0,0,0,0)",
+            "secondary_button_text_dark": "rgba(0,0,0,0)",
+            "colors_text_link_dark": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "heading_phxWYV",
+        "button_zpWWi9"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "show_sound_control": false,
+        "video_url": "",
+        "video_alt_text": "",
+        "enable_video_autoplay": false,
+        "desktop_height": "550px",
+        "mobile_height": "400px",
+        "desktop_image_width": "large",
+        "image_layout": "normal",
+        "image_corner_radius": 0,
+        "content_layout": "overlap",
+        "spacing_image": false,
+        "text_position": "center",
+        "text_alignment": "start",
+        "background_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "line_border": "dashed",
+        "icon_position": "col",
+        "icon_size": 45,
+        "alignment": "center",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "heading_color_light": "rgba(0,0,0,0)",
+        "text_color_light": "rgba(0,0,0,0)",
+        "line_border_light": "rgba(0,0,0,0)",
+        "icon_color_light": "rgba(0,0,0,0)",
+        "heading_color_dark": "rgba(0,0,0,0)",
+        "text_color_dark": "rgba(0,0,0,0)",
+        "line_border_dark": "rgba(0,0,0,0)",
+        "icon_color_dark": "rgba(0,0,0,0)",
+        "image_alignment": "left",
+        "full_width": false,
+        "padding_full_width": false,
+        "top_padding": 0,
+        "bottom_padding": 0,
+        "image_alignment_mobile": "left",
+        "full_width_mobile": false,
+        "top_padding_mobile": 0,
+        "bottom_padding_mobile": 0
+      }
+    },
+    "faq_byLxM7": {
+      "type": "faq",
+      "blocks": {
+        "frequently_asked_question_tdwyep": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "heart",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Frequently asked question",
+            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        },
+        "frequently_asked_question_qKUeCx": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "heart",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Frequently asked question",
+            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        },
+        "frequently_asked_question_p9THCx": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "heart",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Frequently asked question",
+            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        },
+        "frequently_asked_question_KdBJC7": {
+          "type": "frequently_asked_question",
+          "settings": {
+            "icon": "heart",
+            "another_icon": "",
+            "custom_icon": "",
+            "heading": "Frequently asked question",
+            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "frequently_asked_question_tdwyep",
+        "frequently_asked_question_qKUeCx",
+        "frequently_asked_question_p9THCx",
+        "frequently_asked_question_KdBJC7"
+      ],
+      "disabled": true,
+      "name": "t:sections.question_and_answer.presets.name",
+      "settings": {
+        "heading": "FAQs",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "show_border": false,
+        "row_background": false,
+        "collapsible": true,
+        "show_view_all": true,
+        "view_all_position": "top",
+        "button_link": "",
+        "open_new_window": false,
+        "background_color_light": "rgba(0,0,0,0)",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "enable_microdata_schema": false,
+        "desktop_layout": "1",
+        "image_alignment": "left",
+        "desktop_height": "400px",
+        "show_section_divider": false,
+        "make_full_page_width": false,
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "image_alignment_mobile": "left",
+        "mobile_height": "250px",
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    },
+    "1774373014960824ac": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "331e6fca-2947-4a19-89c5-9396be0d666a": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--21918975852859__331e6fca-2947-4a19-89c5-9396be0d666a-column-3": {
+          "type": "column",
+          "settings": {
+            "icon": "truck",
+            "another_icon": "",
+            "custom_icon": "",
+            "title": "Delivery All Over Lebanon",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": ""
+          }
+        },
+        "template--21918975852859__331e6fca-2947-4a19-89c5-9396be0d666a-column-4": {
+          "type": "column",
+          "settings": {
+            "icon": "telephone",
+            "another_icon": "",
+            "custom_icon": "",
+            "title": "24/7 support",
+            "highlight_type": "underline",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": 100,
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21918975852859__331e6fca-2947-4a19-89c5-9396be0d666a-column-3",
+        "template--21918975852859__331e6fca-2947-4a19-89c5-9396be0d666a-column-4"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "highlight_type": "underline",
+        "heading_size": 100,
+        "heading_tag": "h2",
+        "secondary_background": "column",
+        "border_column": "none",
+        "column_content_alignment": "center",
+        "icon_position": "above",
+        "icon_size": 45,
+        "enable_desktop_slider": false,
+        "swiper_on_mobile": true,
+        "auto_play": true,
+        "change_bar_every": 5,
+        "background_color_light": "#2f6fed",
+        "heading_light": "#ffffff",
+        "text_light": "#ffffff",
+        "color_heading_highlight_light": "rgba(0,0,0,0)",
+        "line_border_light": "#ffffff",
+        "color_icon_light": "#ffffff",
+        "background_color_dark": "#ffffff",
+        "heading_dark": "rgba(0,0,0,0)",
+        "text_dark": "#ffffff",
+        "color_heading_highlight_dark": "rgba(0,0,0,0)",
+        "line_border_dark": "#ffffff",
+        "color_icon_dark": "#ffffff",
+        "column_layout_desktop": "lg:w-1/4",
+        "section_height_desktop": "md:py-7",
+        "spacing_desktop": 28,
+        "full_width": false,
+        "padding_full_width": false,
+        "show_section_divider": false,
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "column_layout_mobile": "w-full",
+        "section_height_mobile": "py-5",
+        "spacing_mobile": 16,
+        "full_width_mobile": true,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "custom_liquid_fBY4C3": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{%- comment -%}\n==================================================================\n  TEA (Brew your Health) — PRODUCT PAGE  (single Custom Liquid block)\n  Customize > Products > [any product] > Add section > Custom Liquid.\n  Uses the CURRENT product automatically — works for all your teas.\n  Layout: Announcement · Header · Product content (gallery, price,\n          sale badge, countdown, brew note, delivery, Add to Cart) ·\n          Related products · How to brew · Comparison · FAQ ·\n          Trust icons · Footer (+ Popup · Privacy · Cart · Sticky ATC)\n==================================================================\n{%- endcomment -%}\n\n{%- assign p = product -%}\n{%- unless p -%}{%- assign p = all_products.first -%}{%- endunless -%}\n{%- assign cur = p.selected_or_first_available_variant -%}\n\n<style>\n  #tea-pdp{--green:#2F5D3A;--accent:#4F8A3D;--light:#F3F7ED;--text:#566150;--border:#E1E8DA;--gold:#D4A437;--sale:#B45309;\n    font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif;color:var(--green);line-height:1.6;}\n  #tea-pdp *{box-sizing:border-box;}\n  #tea-pdp img{max-width:100%;display:block;}\n  #tea-pdp .wrap{max-width:1140px;margin:0 auto;padding:0 20px;}\n  #tea-pdp .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:#fff;font-weight:700;font-size:16px;border:none;border-radius:999px;padding:15px 32px;cursor:pointer;text-decoration:none;box-shadow:0 8px 24px rgba(79,138,61,.3);transition:transform .15s,box-shadow .15s;width:100%;}\n  #tea-pdp .btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(79,138,61,.42);}\n  #tea-pdp .btn[disabled]{background:#9CA89A;box-shadow:none;cursor:not-allowed;}\n  #tea-pdp .stars{color:var(--gold);letter-spacing:2px;}\n  #tea-pdp .h2{font-size:32px;font-weight:800;text-align:center;margin:0 0 8px;}\n  #tea-pdp .lead{text-align:center;color:var(--text);max-width:620px;margin:0 auto 36px;}\n  #tea-pdp .sect{padding:56px 0;}\n  #tea-pdp .alt{background:var(--light);}\n\n  /* announcement + header */\n  #tea-pdp .ann{background:var(--green);color:#fff;overflow:hidden;}\n  #tea-pdp .ann-track{display:flex;gap:60px;white-space:nowrap;padding:10px 0;animation:tea-ann 25s linear infinite;}\n  #tea-pdp .ann:hover .ann-track{animation-play-state:paused;}\n  #tea-pdp .ann span{font-size:13px;font-weight:600;letter-spacing:.4px;}\n  @keyframes tea-ann{from{transform:translateX(0);}to{transform:translateX(-50%);}}\n  #tea-pdp .hdr{background:#fff;border-bottom:1px solid #EEF2E9;position:sticky;top:0;z-index:40;}\n  #tea-pdp .hdr-in{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:1140px;margin:0 auto;}\n  #tea-pdp .hdr-logo{font-size:24px;font-weight:800;color:var(--green);text-decoration:none;letter-spacing:.5px;}\n  #tea-pdp .hdr-logo span{color:var(--accent);}\n  #tea-pdp .hdr-nav{display:flex;gap:26px;}\n  #tea-pdp .hdr-nav a{color:var(--green);text-decoration:none;font-weight:600;font-size:15px;}\n  #tea-pdp .hdr-nav a:hover{color:var(--accent);}\n  #tea-pdp .hdr-act{display:flex;align-items:center;gap:18px;}\n  #tea-pdp .hdr-act a,#tea-pdp .hdr-act button{background:none;border:none;cursor:pointer;color:var(--green);text-decoration:none;display:flex;padding:0;}\n  #tea-pdp .hdr-act svg{width:22px;height:22px;}\n  #tea-pdp .hdr-cart{position:relative;}\n  #tea-pdp .hdr-count{position:absolute;top:-8px;right:-10px;background:var(--accent);color:#fff;font-size:11px;font-weight:700;min-width:18px;height:18px;border-radius:9px;display:flex;align-items:center;justify-content:center;padding:0 4px;}\n  @media(max-width:760px){#tea-pdp .hdr-nav{display:none;}}\n\n  /* breadcrumb */\n  #tea-pdp .crumb{font-size:13px;color:#94A3B8;padding:16px 0 0;}\n  #tea-pdp .crumb a{color:#94A3B8;text-decoration:none;}#tea-pdp .crumb a:hover{color:var(--accent);}\n\n  /* product content */\n  #tea-pdp .pc{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:24px 0 56px;align-items:start;}\n  #tea-pdp .gallery .main{border-radius:16px;background:var(--light);aspect-ratio:1/1;object-fit:cover;width:100%;}\n  #tea-pdp .thumbs{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;}\n  #tea-pdp .thumbs img{width:74px;height:74px;object-fit:cover;border-radius:10px;border:2px solid var(--border);cursor:pointer;background:var(--light);}\n  #tea-pdp .thumbs img.active{border-color:var(--accent);}\n  #tea-pdp .pc h1{font-size:34px;font-weight:800;margin:6px 0 12px;}\n  #tea-pdp .price-row{display:flex;align-items:center;gap:12px;margin-bottom:6px;flex-wrap:wrap;}\n  #tea-pdp .price{font-size:30px;font-weight:800;color:var(--sale);}\n  #tea-pdp .compare{font-size:19px;color:#94A3B8;text-decoration:line-through;}\n  #tea-pdp .sale-badge{background:var(--green);color:#fff;font-weight:800;font-size:12px;padding:5px 10px;border-radius:6px;letter-spacing:.5px;}\n  #tea-pdp .pc-desc{color:var(--text);font-size:15px;margin:14px 0;}\n  #tea-pdp .brew{display:flex;gap:10px;align-items:flex-start;background:var(--light);border:1px solid var(--border);border-radius:12px;padding:13px 16px;margin:14px 0;font-size:14px;color:var(--text);}\n  #tea-pdp .brew svg{width:20px;height:20px;color:var(--accent);flex:none;margin-top:2px;}\n  #tea-pdp .brew b{color:var(--green);}\n  #tea-pdp .countdown{background:var(--light);border:1px solid var(--border);border-radius:12px;padding:14px 16px;text-align:center;margin:16px 0;}\n  #tea-pdp .countdown .cd-label{font-size:13px;font-weight:700;margin-bottom:8px;}\n  #tea-pdp .countdown .cd-clock{display:flex;justify-content:center;align-items:center;gap:8px;}\n  #tea-pdp .countdown .cd-unit{background:var(--green);color:#fff;border-radius:8px;min-width:54px;padding:8px 6px;}\n  #tea-pdp .countdown .cd-num{font-size:22px;font-weight:800;line-height:1;}\n  #tea-pdp .countdown .cd-cap{font-size:10px;opacity:.7;text-transform:uppercase;letter-spacing:.5px;}\n  #tea-pdp .countdown .cd-sep{font-size:20px;font-weight:800;color:var(--green);}\n  #tea-pdp .opt{margin:14px 0;}\n  #tea-pdp .opt label{display:block;font-weight:700;font-size:13px;margin-bottom:7px;}\n  #tea-pdp .swatches{display:flex;flex-wrap:wrap;gap:8px;}\n  #tea-pdp .swatch{border:2px solid var(--border);border-radius:10px;padding:9px 16px;cursor:pointer;font-weight:600;font-size:14px;background:#fff;}\n  #tea-pdp .swatch.active{border-color:var(--accent);background:#E7EFDD;color:var(--accent);}\n  #tea-pdp .qty{display:inline-flex;align-items:center;border:2px solid var(--border);border-radius:10px;overflow:hidden;}\n  #tea-pdp .qty button{width:42px;height:42px;border:none;background:#fff;font-size:20px;cursor:pointer;}\n  #tea-pdp .qty input{width:46px;height:42px;text-align:center;border:none;font-size:16px;font-weight:700;-moz-appearance:textfield;}\n  #tea-pdp .qty input::-webkit-outer-spin-button,#tea-pdp .qty input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0;}\n  #tea-pdp .delivery{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text);background:var(--light);border-radius:10px;padding:10px 14px;margin-top:14px;}\n  #tea-pdp .delivery svg{width:18px;height:18px;color:var(--accent);flex:none;}\n  #tea-pdp .delivery b{color:var(--green);}\n  #tea-pdp .pc-badges{display:flex;flex-wrap:wrap;gap:16px;margin-top:16px;}\n  #tea-pdp .pc-badges .b{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--text);}\n  #tea-pdp .pc-badges svg{width:18px;height:18px;color:var(--accent);}\n  @media(max-width:760px){#tea-pdp .pc{grid-template-columns:1fr;gap:24px;}#tea-pdp .pc h1{font-size:28px;}}\n\n  /* related products */\n  #tea-pdp .rel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}\n  #tea-pdp .rel a{text-decoration:none;color:var(--green);}\n  #tea-pdp .rel .card{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:#fff;transition:box-shadow .15s;}\n  #tea-pdp .rel .card:hover{box-shadow:0 10px 26px rgba(47,93,58,.1);}\n  #tea-pdp .rel .card img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--light);}\n  #tea-pdp .rel .card .body{padding:12px;}\n  #tea-pdp .rel .card .nm{font-weight:700;font-size:14px;}\n  #tea-pdp .rel .card .pr{color:var(--accent);font-weight:800;font-size:14px;margin-top:4px;}\n  @media(max-width:760px){#tea-pdp .rel{grid-template-columns:1fr 1fr;}}\n\n  /* split image+text (how to brew) */\n  #tea-pdp .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}\n  #tea-pdp .split img,#tea-pdp .split .ph{border-radius:16px;width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--light);}\n  #tea-pdp .split .ph{background:linear-gradient(135deg,#E7EFDD,#cfe0c0);display:flex;align-items:center;justify-content:center;font-size:64px;}\n  #tea-pdp .split h2{text-align:left;font-size:28px;}\n  #tea-pdp .split .eyebrow{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;}\n  #tea-pdp .steps{list-style:none;padding:0;margin:16px 0 0;counter-reset:s;}\n  #tea-pdp .steps li{display:flex;gap:12px;margin-bottom:14px;font-size:15px;align-items:flex-start;}\n  #tea-pdp .steps li::before{counter-increment:s;content:counter(s);background:var(--accent);color:#fff;font-weight:800;font-size:13px;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none;}\n  @media(max-width:760px){#tea-pdp .split{grid-template-columns:1fr;gap:24px;}#tea-pdp .split h2{text-align:center;}}\n\n  /* key benefits (per product) */\n  #tea-pdp .ben-eyebrow{display:block;text-align:center;color:var(--accent);font-weight:700;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;}\n  #tea-pdp .benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:32px 0 28px;}\n  #tea-pdp .bcard{display:flex;gap:14px;background:#fff;border:1px solid var(--border);border-radius:14px;padding:18px;align-items:flex-start;}\n  #tea-pdp .bcard .bi{width:44px;height:44px;border-radius:50%;background:#E7EFDD;display:flex;align-items:center;justify-content:center;font-size:22px;flex:none;}\n  #tea-pdp .bcard h3{margin:0 0 4px;font-size:16px;}\n  #tea-pdp .bcard p{margin:0;font-size:14px;color:var(--text);line-height:1.55;}\n  #tea-pdp .prep-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;max-width:900px;margin:0 auto;}\n  #tea-pdp .prep,#tea-pdp .warn{border-radius:14px;padding:18px 20px;font-size:14px;line-height:1.55;}\n  #tea-pdp .prep{background:var(--light);border:1px solid var(--border);color:var(--text);}\n  #tea-pdp .prep h3{margin:0 0 6px;font-size:15px;color:var(--green);}\n  #tea-pdp .warn{background:#FDF3E7;border:1px solid #F3D9B5;color:#8A5A12;}\n  #tea-pdp .warn h3{margin:0 0 6px;font-size:15px;color:#B45309;}\n  @media(max-width:680px){#tea-pdp .benefits{grid-template-columns:1fr;}}\n\n  /* comparison table */\n  #tea-pdp .cmp{max-width:820px;margin:0 auto;}\n  #tea-pdp .cmp-table{width:100%;border-collapse:separate;border-spacing:0;}\n  #tea-pdp .cmp-table th,#tea-pdp .cmp-table td{padding:16px 14px;text-align:center;font-size:14px;}\n  #tea-pdp .cmp-table th:first-child,#tea-pdp .cmp-table td:first-child{text-align:left;font-weight:600;color:var(--green);}\n  #tea-pdp .cmp-table thead th{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text);}\n  #tea-pdp .cmp-table thead th.us{background:var(--green);color:#fff;border-radius:10px 10px 0 0;font-size:13px;}\n  #tea-pdp .cmp-table td.us{background:#E7EFDD;color:var(--accent);font-weight:800;}\n  #tea-pdp .cmp-table tbody tr:last-child td.us{border-radius:0 0 10px 10px;}\n  #tea-pdp .cmp-table td.other{color:#94A3B8;font-weight:700;}\n  #tea-pdp .cmp-table tbody tr td:first-child,#tea-pdp .cmp-table tbody tr td.other{border-bottom:1px solid var(--border);}\n  #tea-pdp .cmp-table tbody tr:last-child td{border-bottom:none;}\n\n  /* faq */\n  #tea-pdp .faq{max-width:760px;margin:0 auto;}\n  #tea-pdp .faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;background:#fff;}\n  #tea-pdp .faq-q{width:100%;text-align:left;background:none;border:none;padding:18px 20px;font-size:16px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--green);}\n  #tea-pdp .faq-q .pl{font-size:22px;transition:transform .2s;}\n  #tea-pdp .faq-a{padding:0 20px;max-height:0;overflow:hidden;transition:max-height .25s,padding .25s;color:var(--text);font-size:15px;}\n  #tea-pdp .faq-item.open .faq-a{padding:0 20px 18px;max-height:400px;}\n  #tea-pdp .faq-item.open .pl{transform:rotate(45deg);}\n\n  /* trust icons */\n  #tea-pdp .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}\n  #tea-pdp .trust .ti{text-align:center;}\n  #tea-pdp .trust .ti .ico{width:58px;height:58px;border-radius:50%;background:#E7EFDD;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:26px;}\n  #tea-pdp .trust .ti h3{font-size:16px;margin:0 0 4px;}#tea-pdp .trust .ti p{font-size:13px;color:var(--text);margin:0;}\n  @media(max-width:760px){#tea-pdp .trust{grid-template-columns:1fr 1fr;}}\n\n  /* footer */\n  #tea-pdp .ft{background:var(--green);color:#fff;padding:54px 0 0;}\n  #tea-pdp .ft a{color:#fff;text-decoration:none;opacity:.85;}#tea-pdp .ft a:hover{opacity:1;text-decoration:underline;}\n  #tea-pdp .ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:40px;}\n  #tea-pdp .ft .name{font-size:22px;font-weight:800;}#tea-pdp .ft p.tag{opacity:.85;font-size:14px;max-width:280px;}\n  #tea-pdp .ft h4{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin:0 0 14px;}\n  #tea-pdp .ft ul{list-style:none;padding:0;margin:0;}#tea-pdp .ft li{margin-bottom:10px;font-size:14px;}\n  #tea-pdp .ft .news input{padding:11px 14px;border:none;border-radius:8px;font-size:14px;width:100%;margin-bottom:8px;}\n  #tea-pdp .ft .news button{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:11px 18px;font-weight:700;cursor:pointer;width:100%;}\n  #tea-pdp .ft-bottom{border-top:1px solid rgba(255,255,255,.15);padding:20px 0;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;}\n  #tea-pdp .ft-bottom p{margin:0;font-size:13px;opacity:.7;}\n  #tea-pdp .ft-cod span{background:rgba(255,255,255,.12);border-radius:5px;padding:4px 10px;font-size:12px;font-weight:700;}\n  @media(max-width:760px){#tea-pdp .ft-grid{grid-template-columns:1fr 1fr;}}\n\n  /* sticky atc */\n  #tea-pdp .sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#fff;border-top:1px solid var(--border);box-shadow:0 -4px 20px rgba(0,0,0,.08);transform:translateY(110%);transition:transform .3s;}\n  #tea-pdp .sticky.show{transform:translateY(0);}\n  #tea-pdp .sticky-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 20px;max-width:1140px;margin:0 auto;}\n  #tea-pdp .sticky .sname{font-weight:800;font-size:15px;}#tea-pdp .sticky .sprice{color:var(--accent);font-weight:800;}\n  #tea-pdp .sticky .btn{width:auto;padding:12px 26px;font-size:15px;}\n  @media(max-width:600px){#tea-pdp .sticky .sname{display:none;}}\n\n  /* popup / privacy / cart drawer */\n  #tea-pdp .pop{position:fixed;inset:0;background:rgba(20,46,28,.55);z-index:9998;display:none;align-items:center;justify-content:center;padding:20px;}\n  #tea-pdp .pop.show{display:flex;}\n  #tea-pdp .pop-box{background:#fff;border-radius:18px;max-width:420px;width:100%;padding:30px;text-align:center;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.3);}\n  #tea-pdp .pop-box h3{font-size:24px;font-weight:800;margin:0 0 8px;}#tea-pdp .pop-box p{color:var(--text);margin:0 0 16px;}\n  #tea-pdp .pop-box input{width:100%;padding:14px;border:2px solid var(--border);border-radius:10px;font-size:15px;margin-bottom:10px;}\n  #tea-pdp .pop-box .btn{width:100%;}\n  #tea-pdp .pop-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:24px;cursor:pointer;color:var(--green);line-height:1;}\n  #tea-pdp .priv{position:fixed;left:0;right:0;bottom:0;z-index:9997;background:var(--green);color:#fff;padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:none;}\n  #tea-pdp .priv.show{display:block;}\n  #tea-pdp .priv-in{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;}\n  #tea-pdp .priv-in p{margin:0;font-size:14px;flex:1;min-width:240px;}\n  #tea-pdp .priv-btns{display:flex;gap:10px;}#tea-pdp .priv-btns button{border-radius:999px;padding:10px 22px;font-weight:700;font-size:14px;cursor:pointer;border:none;}\n  #tea-pdp .priv-dec{background:transparent;color:#fff;border:1px solid #fff!important;}#tea-pdp .priv-acc{background:var(--accent);color:#fff;}\n  #tea-pdp .cd-ov{position:fixed;inset:0;background:rgba(20,46,28,.45);z-index:9990;opacity:0;visibility:hidden;transition:opacity .25s;}\n  #tea-pdp .cd-ov.open{opacity:1;visibility:visible;}\n  #tea-pdp .cd{position:fixed;top:0;right:0;bottom:0;width:400px;max-width:90vw;background:#fff;z-index:9991;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .3s;}\n  #tea-pdp .cd.open{transform:translateX(0);}\n  #tea-pdp .cd-head{display:flex;align-items:center;justify-content:space-between;padding:20px;border-bottom:1px solid #EEF2E9;}\n  #tea-pdp .cd-head h3{margin:0;font-size:18px;font-weight:800;}\n  #tea-pdp .cd-close{background:none;border:none;font-size:26px;cursor:pointer;color:var(--green);}\n  #tea-pdp .cd-items{flex:1;overflow-y:auto;padding:16px 20px;}\n  #tea-pdp .cd-item{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid #F1F5EC;}\n  #tea-pdp .cd-item img{width:62px;height:62px;object-fit:cover;border-radius:10px;background:var(--light);}\n  #tea-pdp .cd-title{font-weight:700;font-size:14px;color:var(--green);text-decoration:none;}\n  #tea-pdp .cd-qty{display:inline-flex;align-items:center;border:1px solid var(--border);border-radius:8px;margin-top:6px;}\n  #tea-pdp .cd-qty button{width:28px;height:28px;border:none;background:none;cursor:pointer;font-size:16px;}\n  #tea-pdp .cd-qty span{width:30px;text-align:center;font-size:13px;font-weight:700;}\n  #tea-pdp .cd-rm{background:none;border:none;color:#94A3B8;font-size:12px;cursor:pointer;text-decoration:underline;padding:0;margin-top:4px;}\n  #tea-pdp .cd-foot{padding:20px;border-top:1px solid #EEF2E9;}\n  #tea-pdp .cd-sub{display:flex;justify-content:space-between;font-weight:800;font-size:16px;margin-bottom:6px;}\n  #tea-pdp .cd-co{display:block;text-align:center;background:var(--accent);color:#fff;border-radius:999px;padding:15px;font-weight:700;text-decoration:none;}\n  #tea-pdp .cd-empty{text-align:center;color:#94A3B8;padding:60px 20px;}\n</style>\n\n<div id=\"tea-pdp\">\n\n  <!-- ANNOUNCEMENT -->\n  <div class=\"ann\"><div class=\"ann-track\">\n    {%- for i in (1..2) -%}\n      <span>🌿 100% organic, ethically sourced</span><span>🚚 FREE delivery on every order</span><span>💵 Cash on Delivery available</span><span>⭐ Loved by tea lovers everywhere</span>\n    {%- endfor -%}\n  </div></div>\n\n  <!-- HEADER -->\n  <header class=\"hdr\"><div class=\"hdr-in\">\n    <a class=\"hdr-logo\" href=\"{{ routes.root_url }}\">Tea<span>.</span></a>\n    <nav class=\"hdr-nav\">\n      <a href=\"{{ routes.root_url }}\">Home</a>\n      <a href=\"{{ routes.all_products_collection_url }}\">Shop</a>\n      <a href=\"/pages/about\">About</a>\n      <a href=\"/pages/contact\">Contact</a>\n    </nav>\n    <div class=\"hdr-act\">\n      <a href=\"{{ routes.search_url }}\" aria-label=\"Search\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m21 21-4.3-4.3\"/></svg></a>\n      <a href=\"{{ routes.account_url }}\" aria-label=\"Login\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"8\" r=\"4\"/><path d=\"M4 21c0-4 4-6 8-6s8 2 8 6\"/></svg></a>\n      <button class=\"hdr-cart\" onclick=\"teaCartOpen()\" aria-label=\"Cart\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z\"/><path d=\"M3 6h18\"/><path d=\"M16 10a4 4 0 0 1-8 0\"/></svg><span class=\"hdr-count\" id=\"tea-count\">{{ cart.item_count }}</span></button>\n    </div>\n  </div></header>\n\n  <!-- PRODUCT CONTENT -->\n  <div class=\"wrap\">\n    <div class=\"crumb\"><a href=\"{{ routes.root_url }}\">Home</a> / <a href=\"{{ routes.all_products_collection_url }}\">Shop</a> / {{ p.title }}</div>\n    <div class=\"pc\">\n      <div class=\"gallery\">\n        {%- if p.featured_image -%}\n          <img class=\"main\" id=\"tea-main\" src=\"{{ p.featured_image | image_url: width:900 }}\" alt=\"{{ p.title | escape }}\">\n          {%- if p.images.size > 1 -%}\n            <div class=\"thumbs\">\n              {%- for img in p.images limit:6 -%}\n                <img src=\"{{ img | image_url: width:160 }}\" class=\"{% if forloop.first %}active{% endif %}\" onclick=\"teaSwap('{{ img | image_url: width:900 }}',this)\" alt=\"\">\n              {%- endfor -%}\n            </div>\n          {%- endif -%}\n        {%- else -%}<div class=\"main\"></div>{%- endif -%}\n      </div>\n\n      <div class=\"info\">\n        <span class=\"stars\">★★★★★</span> <span style=\"color:#94A3B8;font-size:13px;font-weight:600;\">4.9 · organic & loved</span>\n        <h1>{{ p.title }}</h1>\n\n        {%- form 'product', p, id:'tea-form' -%}\n          <div class=\"price-row\">\n            <span class=\"price\" id=\"tea-price\">{{ cur.price | money }}</span>\n            {%- if cur.compare_at_price > cur.price -%}\n              <span class=\"compare\">{{ cur.compare_at_price | money }}</span>\n              {%- assign diff = cur.compare_at_price | minus: cur.price -%}\n              {%- assign pct = diff | times:100 | divided_by: cur.compare_at_price -%}\n              <span class=\"sale-badge\">SALE {{ pct }}% OFF</span>\n            {%- endif -%}\n          </div>\n          <p class=\"pc-desc\">{{ p.description | strip_html | truncatewords: 45 }}</p>\n\n          <div class=\"brew\">\n            <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M4 8h13a3 3 0 0 1 0 6h-1M4 8v8a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V8H4z\"/><path d=\"M7 3v2M11 3v2\"/></svg>\n            <span><b>How to enjoy:</b> Add 1 teaspoon to a cup of hot water — see full preparation below.</span>\n          </div>\n\n          <div class=\"countdown\">\n            <div class=\"cd-label\">⏰ Hurry! Sale ends in</div>\n            <div class=\"cd-clock\">\n              <div class=\"cd-unit\"><div class=\"cd-num\" id=\"tea-cd-h\">00</div><div class=\"cd-cap\">Hrs</div></div><span class=\"cd-sep\">:</span>\n              <div class=\"cd-unit\"><div class=\"cd-num\" id=\"tea-cd-m\">00</div><div class=\"cd-cap\">Min</div></div><span class=\"cd-sep\">:</span>\n              <div class=\"cd-unit\"><div class=\"cd-num\" id=\"tea-cd-s\">00</div><div class=\"cd-cap\">Sec</div></div>\n            </div>\n          </div>\n\n          {%- unless p.has_only_default_variant -%}\n            {%- for opt in p.options_with_values -%}\n              <div class=\"opt\"><label>{{ opt.name }}</label>\n                <div class=\"swatches\">\n                  {%- for val in opt.values -%}\n                    <div class=\"swatch {% if opt.selected_value == val %}active{% endif %}\" data-value=\"{{ val | escape }}\" onclick=\"teaOpt(this,{{ forloop.parentloop.index0 }})\">{{ val }}</div>\n                  {%- endfor -%}\n                </div>\n              </div>\n            {%- endfor -%}\n          {%- endunless -%}\n          <select name=\"id\" id=\"tea-sel\" style=\"display:none;\">\n            {%- for v in p.variants -%}\n              <option value=\"{{ v.id }}\" {% if v == cur %}selected{% endif %} {% unless v.available %}disabled{% endunless %} data-price=\"{{ v.price | money }}\" {% for o in v.options %}data-opt{{ forloop.index0 }}=\"{{ o | escape }}\"{% endfor %}>{{ v.title }}</option>\n            {%- endfor -%}\n          </select>\n\n          <div class=\"opt\"><label>Quantity</label>\n            <div class=\"qty\"><button type=\"button\" onclick=\"teaQty(-1)\">−</button><input type=\"number\" name=\"quantity\" id=\"tea-qty\" value=\"1\" min=\"1\"><button type=\"button\" onclick=\"teaQty(1)\">+</button></div>\n          </div>\n\n          <button type=\"submit\" class=\"btn\" id=\"tea-atc\" {% unless cur.available %}disabled{% endunless %}>{% if cur.available %}Add to Cart — {{ cur.price | money }}{% else %}Sold Out{% endif %}</button>\n\n          <div class=\"delivery\">\n            <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M1 3h15v13H1zM16 8h4l3 3v5h-7\"/><circle cx=\"5.5\" cy=\"18.5\" r=\"2.5\"/><circle cx=\"18.5\" cy=\"18.5\" r=\"2.5\"/></svg>\n            <span>Order now to receive by <b id=\"tea-delivery\">—</b></span>\n          </div>\n          <div class=\"pc-badges\">\n            <span class=\"b\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2C7 7 5 9 5 13a7 7 0 0 0 14 0c0-4-2-6-7-11z\"/></svg> 100% organic</span>\n            <span class=\"b\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"2\" y=\"6\" width=\"20\" height=\"12\" rx=\"2\"/><path d=\"M2 10h20\"/></svg> Cash on delivery</span>\n            <span class=\"b\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M9 12l2 2 4-4\"/></svg> No additives</span>\n          </div>\n        {%- endform -%}\n      </div>\n    </div>\n  </div>\n\n  <!-- KEY BENEFITS (per product, auto by handle) -->\n  <section class=\"sect\"><div class=\"wrap\">\n    {%- assign h = p.handle -%}\n\n    {%- if h contains 'ashwagandha' or h contains 'serenity' -%}\n      <span class=\"ben-eyebrow\">Brew your serenity</span>\n      <h2 class=\"h2\">Why You'll Love It</h2>\n      <p class=\"lead\">Sourced from the highest-quality Withania somnifera roots, our pure Ashwagandha is the ancient adaptogen made for modern life.</p>\n      <div class=\"benefits\">\n        <div class=\"bcard\"><div class=\"bi\">🧘</div><div><h3>Stress &amp; Energy Balance</h3><p>Supports your body in managing stress while promoting physical recovery — for more energy and resilience.</p></div></div>\n        <div class=\"bcard\"><div class=\"bi\">🧠</div><div><h3>Clarity &amp; Focus</h3><p>Helps sharpen memory and improve mental clarity and focus.</p></div></div>\n        <div class=\"bcard\"><div class=\"bi\">🌿</div><div><h3>Wellness Support</h3><p>Helps support healthy blood-sugar balance and, in men, natural testosterone production.</p></div></div>\n        <div class=\"bcard\"><div class=\"bi\">🌱</div><div><h3>100% Organic</h3><p>Pure single-ingredient root powder — no fillers or additives.</p></div></div>\n      </div>\n      <div class=\"prep-grid\">\n        <div class=\"prep\"><h3>☕ Preparation</h3>Mix one teaspoon with a cup of hot water. Best enjoyed in the afternoon or before bedtime.</div>\n        <div class=\"warn\"><h3>⚠ Important Warning</h3>Do not take if you are pregnant or breastfeeding, or if you have any prostate problems. Consult your doctor if you are taking medication or have a medical condition.</div>\n      </div>\n\n    {%- elsif h contains 'sleep' or h contains 'stress' or h contains 'dream' -%}\n      <span class=\"ben-eyebrow\">Brew your dream</span>\n      <h2 class=\"h2\">Why You'll Love It</h2>\n      <p class=\"lead\">A calming bedtime blend crafted to quiet the mind and ease you into deep, restful sleep.</p>\n      <div class=\"benefits\">\n        <div class=\"bcard\"><div class=\"bi\">🌙</div><div><h3>Quiets the Mind</h3><p>Ashwagandha and valerian root work together to soothe stress and silence the day's mental noise.</p></div></div>\n        <div class=\"bcard\"><div class=\"bi\">🪻</div><div><h3>Induces Natural Calm</h3><p>Gentle lavender and chamomile wrap the senses in tranquility, making it easier to drift off.</p></div></div>\n        <div class=\"bcard\"><div class=\"bi\">😴</div><div><h3>Sustains Restful Sleep</h3><p>Aromatic aniseed helps stabilize the nervous system so you stay asleep for longer, deeper cycles.</p></div></div>\n        <div class=\"bcard\"><div class=\"bi\">🌿</div><div><h3>100% Organic</h3><p>A clean herbal blend with no additives — just calming botanicals.</p></div></div>\n      </div>\n      <div class=\"prep-grid\">\n        <div class=\"prep\"><h3>☕ Preparation</h3>Enjoy one warm cup about 30 minutes before bed to calm the nervous system, induce sleepiness, and help you stay asleep for longer.</div>\n        <div class=\"warn\"><h3>⚠ Important Warning</h3>Not recommended during pregnancy or breastfeeding, or alongside sedatives. Consult your doctor if you take medication or have a medical condition.</div>\n      </div>\n\n    {%- elsif h contains 'breath' or h contains 'clean' or h contains 'respir' or h contains 'lung' -%}\n      <span class=\"ben-eyebrow\">Brew your health</span>\n      <h2 class=\"h2\">Why You'll Love It</h2>\n      <p class=\"lead\">A herbal blend that supports your lungs, soothes the throat, and helps you breathe easy.</p>\n      <div class=\"benefits\">\n        <div class=\"bcard\"><div class=\"bi\">🫁</div><div><h3>Respiratory Support</h3><p>Thyme, sage and rosemary naturally help strengthen the lungs and soothe the throat.</p></div></div>\n        <div class=\"bcard\"><div class=\"bi\">💨</div><div><h3>Deep Clearance</h3><p>Helps clear mucus and phlegm build-up caused by smoking or illness.</p></div></div>\n        <div class=\"bcard\"><div class=\"bi\">🌬️</div><div><h3>Airway Comfort</h3><p>Mint, lemongrass and cinnamon calm irritation and ease heavy congestion.</p></div></div>\n        <div class=\"bcard\"><div class=\"bi\">✨</div><div><h3>Clear Breathing</h3><p>Encourages the elimination of toxins for a cleaner, more open respiratory system.</p></div></div>\n      </div>\n      <div class=\"prep-grid\">\n        <div class=\"prep\"><h3>☕ Preparation</h3>Steep one teaspoon in a cup of hot water for 5–7 minutes. Enjoy up to twice daily, warm.</div>\n      </div>\n\n    {%- elsif h contains 'black' or h contains 'ceylon' or h contains 'clarity' -%}\n      <span class=\"ben-eyebrow\">Brew your clarity</span>\n      <h2 class=\"h2\">Why You'll Love It</h2>\n      <p class=\"lead\">Sourced from the mist-shrouded highlands of Sri Lanka, four premium organic Ceylon black teas masterfully blended for unmatched, world-class richness.</p>\n      <div class=\"benefits\">\n        <div class=\"bcard\"><div class=\"bi\">🍃</div><div><h3>Four-Leaf Complexity</h3><p>A master-mix of four distinct loose-leaf teas for a depth of flavor single-origin blends can't match.</p></div></div>\n        <div class=\"bcard\"><div class=\"bi\">☕</div><div><h3>Full-Bodied Intensity</h3><p>Meticulously balanced to deliver a rich, robust, velvety mouthfeel from the first sip to the last.</p></div></div>\n        <div class=\"bcard\"><div class=\"bi\">⚖️</div><div><h3>The Perfect Strength</h3><p>Bold enough for milk, yet smooth enough to be enjoyed pure.</p></div></div>\n        <div class=\"bcard\"><div class=\"bi\">🌱</div><div><h3>100% Organic</h3><p>Premium organic Ceylon leaf — nothing artificial added.</p></div></div>\n      </div>\n      <div class=\"prep-grid\">\n        <div class=\"prep\"><h3>☕ Preparation</h3>Steep one teaspoon in freshly boiled water for 3–5 minutes. Delicious with milk or enjoyed pure. Contains natural caffeine.</div>\n      </div>\n\n    {%- elsif h contains 'energ' or h contains 'moringa' or h contains 'mate' or h contains 'power' -%}\n      <span class=\"ben-eyebrow\">Brew your power</span>\n      <h2 class=\"h2\">Why You'll Love It</h2>\n      <p class=\"lead\">Sourced from the heart of India and South America — organic Moringa and Yerba Maté blended with the finest organic cinnamon and hand-picked dried mint.</p>\n      <div class=\"benefits\">\n        <div class=\"bcard\"><div class=\"bi\">🌱</div><div><h3>Moringa Nourishment</h3><p>The \"Miracle Tree Leaf\" is rich in essential vitamins and antioxidants for skin, vision and sustained energy.</p></div></div>\n        <div class=\"bcard\"><div class=\"bi\">⚡</div><div><h3>Clean Energy &amp; Focus</h3><p>Yerba Maté supports alertness and concentration — without the coffee crash.</p></div></div>\n        <div class=\"bcard\"><div class=\"bi\">🔥</div><div><h3>Metabolic Vitality</h3><p>Helps fire up your metabolism and supports enhanced fat-burning.</p></div></div>\n        <div class=\"bcard\"><div class=\"bi\">🌿</div><div><h3>Digestive Harmony</h3><p>Cinnamon and mint support healthy digestion and metabolic function while enhancing blood flow.</p></div></div>\n      </div>\n      <div class=\"prep-grid\">\n        <div class=\"prep\"><h3>☕ Preparation</h3>Steep one teaspoon in hot water for 5–7 minutes. Best enjoyed in the morning or early afternoon. Contains natural caffeine.</div>\n      </div>\n\n    {%- else -%}\n      <h2 class=\"h2\">About This Blend</h2>\n      <div style=\"max-width:760px;margin:0 auto;color:var(--text);font-size:15px;\">{{ p.description }}</div>\n      <div class=\"prep-grid\" style=\"margin-top:24px;\">\n        <div class=\"prep\"><h3>☕ Preparation</h3>Steep one teaspoon in a cup of hot water for 5–7 minutes, then strain and enjoy.</div>\n      </div>\n    {%- endif -%}\n  </div></section>\n\n  <!-- RELATED PRODUCTS -->\n  {%- assign coll = p.collections.first -%}\n  {%- if coll and coll.products.size > 1 -%}\n  <section class=\"sect alt\"><div class=\"wrap\">\n    <h2 class=\"h2\">More Blends You'll Love</h2><p class=\"lead\">Explore the rest of our organic range.</p>\n    <div class=\"rel\">\n      {%- assign shown = 0 -%}\n      {%- for rp in coll.products -%}\n        {%- if rp.id != p.id and shown < 4 -%}\n          {%- assign shown = shown | plus: 1 -%}\n          <a href=\"{{ rp.url }}\"><div class=\"card\">\n            <img src=\"{{ rp.featured_image | image_url: width:400 }}\" alt=\"{{ rp.title | escape }}\">\n            <div class=\"body\"><div class=\"nm\">{{ rp.title | truncate: 40 }}</div><div class=\"pr\">{{ rp.price | money }}</div></div>\n          </div></a>\n        {%- endif -%}\n      {%- endfor -%}\n    </div>\n  </div></section>\n  {%- endif -%}\n\n  <!-- HOW TO BREW -->\n  <section class=\"sect\"><div class=\"wrap\"><div class=\"split\">\n    <div>{%- if p.images[1] -%}<img src=\"{{ p.images[1] | image_url: width:700 }}\" alt=\"\">{%- elsif p.featured_image -%}<img src=\"{{ p.featured_image | image_url: width:700 }}\" alt=\"\">{%- else -%}<div class=\"ph\">🍵</div>{%- endif -%}</div>\n    <div>\n      <span class=\"eyebrow\">Simple Ritual</span>\n      <h2>How to Brew the Perfect Cup</h2>\n      <ul class=\"steps\">\n        <li>Add 1 teaspoon of blend to your cup or infuser.</li>\n        <li>Pour over freshly boiled water (about 200ml).</li>\n        <li>Let it steep for 5–7 minutes to release the full aroma.</li>\n        <li>Strain, sip, and enjoy — add honey or lemon to taste.</li>\n      </ul>\n      <p style=\"color:var(--text);margin-top:16px;font-size:13px;\">Tip: Check the pouch for product-specific timing and any usage notes.</p>\n    </div>\n  </div></div></section>\n\n  <!-- COMPARISON TABLE -->\n  <section class=\"sect alt\"><div class=\"wrap\">\n    <h2 class=\"h2\">Tea vs Other Brands</h2><p class=\"lead\">See why people switch to us — and stay.</p>\n    <div class=\"cmp\"><table class=\"cmp-table\">\n      <thead><tr><th></th><th class=\"us\">Tea.</th><th>Others</th></tr></thead>\n      <tbody>\n        <tr><td>100% organic ingredients</td><td class=\"us\">✓ Yes</td><td class=\"other\">✕ No</td></tr>\n        <tr><td>No artificial flavors or additives</td><td class=\"us\">✓ Yes</td><td class=\"other\">✕ No</td></tr>\n        <tr><td>Hand-blended & freshly packed</td><td class=\"us\">✓ Yes</td><td class=\"other\">✕ No</td></tr>\n        <tr><td>Resealable pouch for freshness</td><td class=\"us\">✓ Yes</td><td class=\"other\">✕ No</td></tr>\n        <tr><td>Free delivery + cash on delivery</td><td class=\"us\">✓ Yes</td><td class=\"other\">✕ No</td></tr>\n        <tr><td>30-day satisfaction guarantee</td><td class=\"us\">✓ Yes</td><td class=\"other\">✕ No</td></tr>\n      </tbody>\n    </table></div>\n  </div></section>\n\n  <!-- FAQ -->\n  <section class=\"sect\"><div class=\"wrap\">\n    <h2 class=\"h2\">Frequently Asked Questions</h2>\n    <div class=\"faq\" style=\"margin-top:28px;\">\n      <div class=\"faq-item\"><button class=\"faq-q\" onclick=\"teaFaq(this)\">How do I prepare it? <span class=\"pl\">+</span></button><div class=\"faq-a\">Steep one teaspoon in a cup of hot water for 5–7 minutes, then strain. Check the pouch for any product-specific directions.</div></div>\n      <div class=\"faq-item\"><button class=\"faq-q\" onclick=\"teaFaq(this)\">Does it contain caffeine? <span class=\"pl\">+</span></button><div class=\"faq-a\">It depends on the blend — black tea and yerba maté contain natural caffeine, while most of our herbal blends are caffeine-free. The product page and pouch will specify.</div></div>\n      <div class=\"faq-item\"><button class=\"faq-q\" onclick=\"teaFaq(this)\">How should I store it? <span class=\"pl\">+</span></button><div class=\"faq-a\">Keep the pouch sealed in a cool, dry place away from direct sunlight to preserve freshness and aroma.</div></div>\n      <div class=\"faq-item\"><button class=\"faq-q\" onclick=\"teaFaq(this)\">Is it safe for everyone? <span class=\"pl\">+</span></button><div class=\"faq-a\">Our teas are made from natural ingredients, but some blends are not recommended during pregnancy, breastfeeding, or with certain conditions. Please read the pouch and consult your doctor if you take medication or have a medical condition.</div></div>\n      <div class=\"faq-item\"><button class=\"faq-q\" onclick=\"teaFaq(this)\">Can I pay cash on delivery? <span class=\"pl\">+</span></button><div class=\"faq-a\">Yes — cash on delivery is available. You pay when your order arrives.</div></div>\n      <div class=\"faq-item\"><button class=\"faq-q\" onclick=\"teaFaq(this)\">What is your return policy? <span class=\"pl\">+</span></button><div class=\"faq-a\">We offer a 30-day satisfaction guarantee. If you're not happy, contact us and we'll make it right.</div></div>\n    </div>\n  </div></section>\n\n  <!-- TRUST ICONS -->\n  <section class=\"sect alt\"><div class=\"wrap\"><div class=\"trust\">\n    <div class=\"ti\"><div class=\"ico\">🌿</div><h3>100% Organic</h3><p>Ethically sourced ingredients.</p></div>\n    <div class=\"ti\"><div class=\"ico\">🚚</div><h3>Free Delivery</h3><p>On every order, no minimum.</p></div>\n    <div class=\"ti\"><div class=\"ico\">💵</div><h3>Cash on Delivery</h3><p>Pay when it arrives.</p></div>\n    <div class=\"ti\"><div class=\"ico\">💬</div><h3>Friendly Support</h3><p>We reply within 24 hours.</p></div>\n  </div></div></section>\n\n  <!-- FOOTER -->\n  <footer class=\"ft\"><div class=\"wrap\">\n    <div class=\"ft-grid\">\n      <div><div class=\"name\">Tea.</div><p class=\"tag\">Hand-blended organic herbal teas. Brew your health, every day.</p></div>\n      <div><h4>Shop</h4><ul><li><a href=\"{{ routes.all_products_collection_url }}\">All Blends</a></li><li><a href=\"{{ p.url }}\">{{ p.title | truncate: 22 }}</a></li></ul></div>\n      <div><h4>Help</h4><ul><li><a href=\"/pages/contact\">Contact</a></li><li><a href=\"/pages/shipping\">Shipping</a></li><li><a href=\"/pages/returns\">Returns</a></li></ul></div>\n      <div class=\"news\"><h4>Stay in touch</h4>\n        {%- form 'customer' -%}<input type=\"hidden\" name=\"contact[tags]\" value=\"newsletter,footer\"><input type=\"email\" name=\"contact[email]\" placeholder=\"Your email\" required><button type=\"submit\">Subscribe</button>{%- if form.posted_successfully? -%}<p style=\"color:#bff0b3;margin-top:8px;font-size:13px;\">Subscribed — thank you!</p>{%- endif -%}{%- endform -%}\n      </div>\n    </div>\n    <div class=\"ft-bottom\"><p>© {{ 'now' | date: '%Y' }} Tea. All rights reserved.</p><div class=\"ft-cod\"><span>💵 Cash on Delivery</span></div></div>\n  </div></footer>\n\n  <!-- STICKY ATC -->\n  <div class=\"sticky\" id=\"tea-sticky\"><div class=\"sticky-in\">\n    <div><span class=\"sname\">{{ p.title }}</span> <span class=\"sprice\" id=\"tea-sprice\">{{ cur.price | money }}</span></div>\n    <button type=\"submit\" form=\"tea-form\" class=\"btn\">Add to Cart</button>\n  </div></div>\n\n  <!-- POPUP -->\n  <div class=\"pop\" id=\"tea-pop\"><div class=\"pop-box\">\n    <button class=\"pop-close\" onclick=\"teaPopClose()\">×</button>\n    <h3>Get 10% Off</h3><p>Sign up and save 10% on your first order.</p>\n    {%- form 'customer' -%}<input type=\"hidden\" name=\"contact[tags]\" value=\"newsletter,popup\"><input type=\"email\" name=\"contact[email]\" placeholder=\"Enter your email\" required><button type=\"submit\" class=\"btn\">Claim My 10%</button>{%- endform -%}\n  </div></div>\n\n  <!-- PRIVACY -->\n  <div class=\"priv\" id=\"tea-priv\"><div class=\"priv-in\"><p>We use cookies to improve your experience and analyze site traffic.</p><div class=\"priv-btns\"><button class=\"priv-dec\" onclick=\"teaConsent('declined')\">Decline</button><button class=\"priv-acc\" onclick=\"teaConsent('accepted')\">Accept</button></div></div></div>\n\n  <!-- CART DRAWER -->\n  <div class=\"cd-ov\" id=\"tea-cd-ov\" onclick=\"teaCartClose()\"></div>\n  <aside class=\"cd\" id=\"tea-cd\" aria-label=\"Cart\">\n    <div class=\"cd-head\"><h3>Your Cart (<span id=\"tea-cd-count\">{{ cart.item_count }}</span>)</h3><button class=\"cd-close\" onclick=\"teaCartClose()\">×</button></div>\n    <div class=\"cd-items\" id=\"tea-cd-items\"></div><div class=\"cd-foot\" id=\"tea-cd-foot\"></div>\n  </aside>\n\n</div>\n\n<script>\n(function(){\n  var COUNTDOWN_HOURS = 12;\n  function fmt(c){ return \"$\"+(c/100).toFixed(2); }\n\n  /* gallery + qty */\n  window.teaSwap=function(src,el){ document.getElementById(\"tea-main\").src=src; el.parentNode.querySelectorAll(\"img\").forEach(function(i){i.classList.remove(\"active\");}); el.classList.add(\"active\"); };\n  window.teaQty=function(d){ var i=document.getElementById(\"tea-qty\"); i.value=Math.max(1,(parseInt(i.value)||1)+d); };\n\n  /* variants */\n  var sel=document.getElementById(\"tea-sel\");\n  window.teaOpt=function(el,gi){\n    el.parentNode.querySelectorAll(\".swatch\").forEach(function(s){s.classList.remove(\"active\");}); el.classList.add(\"active\");\n    if(!sel) return;\n    var groups=document.querySelectorAll(\"#tea-pdp .swatches\"),chosen=[];\n    groups.forEach(function(g){var a=g.querySelector(\".swatch.active\");chosen.push(a?a.getAttribute(\"data-value\"):null);});\n    for(var i=0;i<sel.options.length;i++){\n      var ok=true;\n      for(var k=0;k<chosen.length;k++){ if(chosen[k]&&sel.options[i].getAttribute(\"data-opt\"+k)!==chosen[k]){ok=false;break;} }\n      if(ok){ sel.selectedIndex=i; var pr=sel.options[i].getAttribute(\"data-price\"),dis=sel.options[i].disabled;\n        document.getElementById(\"tea-price\").textContent=pr; var sp=document.getElementById(\"tea-sprice\"); if(sp) sp.textContent=pr;\n        var b=document.getElementById(\"tea-atc\"); if(b){ b.disabled=dis; b.textContent=dis?\"Sold Out\":(\"Add to Cart — \"+pr); } break; }\n    }\n  };\n\n  /* faq */\n  window.teaFaq=function(b){ b.parentNode.classList.toggle(\"open\"); };\n\n  /* countdown (evergreen) */\n  (function(){\n    var hEl=document.getElementById(\"tea-cd-h\"),mEl=document.getElementById(\"tea-cd-m\"),sEl=document.getElementById(\"tea-cd-s\"); if(!hEl) return;\n    var key=\"tea-deadline\",dl=parseInt(localStorage.getItem(key));\n    if(!dl||isNaN(dl)||dl<Date.now()){ dl=Date.now()+COUNTDOWN_HOURS*3600*1000; localStorage.setItem(key,dl); }\n    function pad(n){ return n<10?\"0\"+n:\"\"+n; }\n    function tick(){ var diff=Math.max(0,dl-Date.now()),s=Math.floor(diff/1000);\n      hEl.textContent=pad(Math.floor(s/3600)); mEl.textContent=pad(Math.floor(s%3600/60)); sEl.textContent=pad(s%60);\n      if(diff<=0){ dl=Date.now()+COUNTDOWN_HOURS*3600*1000; localStorage.setItem(key,dl); } }\n    tick(); setInterval(tick,1000);\n  })();\n\n  /* delivery estimate (today + 2 to today + 4) */\n  (function(){ var el=document.getElementById(\"tea-delivery\"); if(!el) return;\n    var o={weekday:\"long\",month:\"long\",day:\"numeric\"},a=new Date(Date.now()+2*864e5),b=new Date(Date.now()+4*864e5);\n    el.textContent=a.toLocaleDateString(undefined,o)+\" – \"+b.toLocaleDateString(undefined,o); })();\n\n  /* sticky bar */\n  var atc=document.getElementById(\"tea-atc\"),sticky=document.getElementById(\"tea-sticky\");\n  if(atc&&sticky){ window.addEventListener(\"scroll\",function(){ var r=atc.getBoundingClientRect(); sticky.classList.toggle(\"show\",r.bottom<0); },{passive:true}); }\n\n  /* popup */\n  window.teaPopClose=function(){ document.getElementById(\"tea-pop\").classList.remove(\"show\"); localStorage.setItem(\"tea-popup\",Date.now()); };\n  setTimeout(function(){ var l=localStorage.getItem(\"tea-popup\"); if(!l||(Date.now()-l)>7*864e5) document.getElementById(\"tea-pop\").classList.add(\"show\"); },6000);\n  document.getElementById(\"tea-pop\").addEventListener(\"click\",function(e){ if(e.target.id===\"tea-pop\") teaPopClose(); });\n\n  /* privacy */\n  window.teaConsent=function(c){ localStorage.setItem(\"tea-consent\",c); if(window.Shopify&&Shopify.customerPrivacy){try{Shopify.customerPrivacy.setTrackingConsent(c===\"accepted\");}catch(e){}} document.getElementById(\"tea-priv\").classList.remove(\"show\"); };\n  if(!localStorage.getItem(\"tea-consent\")) document.getElementById(\"tea-priv\").classList.add(\"show\");\n\n  /* cart drawer */\n  var ov=document.getElementById(\"tea-cd-ov\"),cd=document.getElementById(\"tea-cd\"),itemsEl=document.getElementById(\"tea-cd-items\"),footEl=document.getElementById(\"tea-cd-foot\");\n  function render(cart){\n    document.getElementById(\"tea-cd-count\").textContent=cart.item_count;\n    var hc=document.getElementById(\"tea-count\"); if(hc) hc.textContent=cart.item_count;\n    if(cart.item_count===0){ itemsEl.innerHTML='<div class=\"cd-empty\"><p>Your cart is empty.</p></div>'; footEl.innerHTML=\"\"; return; }\n    var h=\"\";\n    cart.items.forEach(function(it,i){\n      h+='<div class=\"cd-item\"><img src=\"'+(it.image?it.image.replace(/(\\.[a-z]+)(\\?|$)/i,\"_120x$1$2\"):\"\")+'\" alt=\"\">'\n       +'<div style=\"flex:1\"><a class=\"cd-title\" href=\"'+it.url+'\">'+it.product_title+'</a>'\n       +(it.variant_title?'<div style=\"font-size:12px;color:#94A3B8\">'+it.variant_title+'</div>':'')\n       +'<div class=\"cd-qty\"><button onclick=\"teaCartChange('+(i+1)+','+(it.quantity-1)+')\">−</button><span>'+it.quantity+'</span><button onclick=\"teaCartChange('+(i+1)+','+(it.quantity+1)+')\">+</button></div>'\n       +'<button class=\"cd-rm\" onclick=\"teaCartChange('+(i+1)+',0)\">Remove</button></div>'\n       +'<div style=\"font-weight:700\">'+fmt(it.final_line_price)+'</div></div>';\n    });\n    itemsEl.innerHTML=h;\n    footEl.innerHTML='<div class=\"cd-sub\"><span>Subtotal</span><span>'+fmt(cart.total_price)+'</span></div><p style=\"font-size:12px;color:#94A3B8;margin:0 0 14px\">Cash on delivery · taxes at checkout.</p><a class=\"cd-co\" href=\"/checkout\">Checkout</a>';\n  }\n  function refresh(){ fetch(\"/cart.js\").then(function(r){return r.json();}).then(render); }\n  window.teaCartOpen=function(){ ov.classList.add(\"open\"); cd.classList.add(\"open\"); document.body.style.overflow=\"hidden\"; refresh(); };\n  window.teaCartClose=function(){ ov.classList.remove(\"open\"); cd.classList.remove(\"open\"); document.body.style.overflow=\"\"; };\n  window.teaCartChange=function(line,qty){ fetch(\"/cart/change.js\",{method:\"POST\",headers:{\"Content-Type\":\"application/json\"},body:JSON.stringify({line:line,quantity:qty})}).then(function(r){return r.json();}).then(render); };\n  document.addEventListener(\"submit\",function(e){ if(e.target.id===\"tea-form\"){ e.preventDefault(); fetch(\"/cart/add.js\",{method:\"POST\",body:new FormData(e.target)}).then(function(r){return r.json();}).then(function(){ teaCartOpen(); }); } });\n  refresh();\n})();\n</script>",
+        "full_width": false,
+        "show_section_divider": false,
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "full_width_mobile": false,
+        "show_section_divider_mobile": false,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "scrolling_banner_FihEbF",
+    "image_with_text_pny4DB",
+    "scrolling_banner_cXMWJF",
+    "image_with_text_3DwQRt",
+    "faq_byLxM7",
+    "1774373014960824ac",
+    "331e6fca-2947-4a19-89c5-9396be0d666a",
+    "custom_liquid_fBY4C3"
+  ]
+}
