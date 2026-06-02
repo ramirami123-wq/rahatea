@@ -39,6 +39,7 @@
       "block_order": [
         "6be690ad-170e-4af3-9bbb-0a11620d222a"
       ],
+      "disabled": true,
       "settings": {
         "enable": true,
         "show_only_on_homepage": false,
@@ -64,6 +65,7 @@
     },
     "header": {
       "type": "header",
+      "disabled": true,
       "settings": {
         "menu": "main-menu",
         "select_motion": "hover",
@@ -115,6 +117,7 @@
         "mobile-navigation-2",
         "mobile-navigation-3"
       ],
+      "disabled": true,
       "settings": {
         "menu": "main-menu",
         "show_language_selector": true,
