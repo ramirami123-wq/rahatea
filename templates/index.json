@@ -290,7 +290,7 @@
         "speed": 20,
         "direction": "right",
         "pause_hover": true,
-        "bg_light": "#2f6fed",
+        "bg_light": "#0a2e46",
         "color_text_light": "#ffffff",
         "color_text_light_2": "rgba(0,0,0,0)",
         "color_heading_highlight_light": "rgba(0,0,0,0)",
@@ -306,154 +306,34 @@
         "padding_bottom_mobile": 28
       }
     },
-    "faq_McEVrE": {
-      "type": "faq",
-      "blocks": {
-        "frequently_asked_question_cCBAj6": {
-          "type": "frequently_asked_question",
-          "settings": {
-            "icon": "heart",
-            "another_icon": "",
-            "custom_icon": "",
-            "heading": "What does this eye device do?",
-            "row_content": "<p><br/>Our eye care device is designed to help relax the eye area, reduce the appearance of puffiness, and support a refreshed, well-rested look using gentle light and soothing technology.<br/><br/></p>"
-          }
-        },
-        "frequently_asked_question_kjDnG9": {
-          "type": "frequently_asked_question",
-          "settings": {
-            "icon": "heart",
-            "another_icon": "",
-            "custom_icon": "",
-            "heading": "Is it safe to use daily?",
-            "row_content": "<p>Yes, the device is designed for regular use. However, we recommend following the usage guidelines and consulting a professional if you have any medical concerns.<br/><br/></p>"
-          }
-        },
-        "frequently_asked_question_4dJVT3": {
-          "type": "frequently_asked_question",
-          "settings": {
-            "icon": "heart",
-            "another_icon": "",
-            "custom_icon": "",
-            "heading": "How long does it take to see results?",
-            "row_content": "<p>Results may vary, but many users notice a more relaxed and refreshed feeling immediately, with visible improvements over consistent use.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "frequently_asked_question_cCBAj6",
-        "frequently_asked_question_kjDnG9",
-        "frequently_asked_question_4dJVT3"
-      ],
-      "name": "t:sections.question_and_answer.presets.name",
+    "custom_liquid_3w7JfL": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "heading": "FAQs",
-        "highlight_type": "underline",
-        "heading_size": 100,
-        "heading_tag": "h2",
-        "heading_alignment": "center",
-        "show_border": false,
-        "row_background": false,
-        "collapsible": true,
-        "show_view_all": true,
-        "view_all_position": "top",
-        "button_link": "",
-        "open_new_window": false,
-        "background_color_light": "rgba(0,0,0,0)",
-        "background_color_dark": "rgba(0,0,0,0)",
-        "enable_microdata_schema": false,
-        "desktop_layout": "1",
-        "image_alignment": "left",
-        "desktop_height": "400px",
+        "custom_liquid": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css\" />\n\n<style>\n  .faq-section {\n    padding: 4rem 2rem;\n    max-width: 720px;\n    margin: 0 auto;\n    font-family: sans-serif;\n  }\n  .faq-label {\n    font-size: 13px;\n    font-weight: 500;\n    letter-spacing: 0.12em;\n    text-transform: uppercase;\n    color: #5a7a4a;\n    margin-bottom: 0.75rem;\n    text-align: center;\n  }\n  .faq-title {\n    font-size: 2.2rem;\n    font-weight: 500;\n    color: #1a1a1a;\n    text-align: center;\n    margin: 0 0 0.75rem;\n    line-height: 1.2;\n  }\n  .faq-subtitle {\n    font-size: 1rem;\n    color: #666;\n    text-align: center;\n    margin: 0 auto 3rem;\n    max-width: 480px;\n    line-height: 1.7;\n  }\n  .faq-list {\n    display: flex;\n    flex-direction: column;\n    border-top: 1px solid #e0e0d8;\n  }\n  .faq-item {\n    border-bottom: 1px solid #e0e0d8;\n  }\n  .faq-question {\n    width: 100%;\n    background: none;\n    border: none;\n    padding: 1.25rem 0;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    cursor: pointer;\n    text-align: left;\n    gap: 1rem;\n  }\n  .faq-question span {\n    font-size: 1rem;\n    font-weight: 500;\n    color: #1a1a1a;\n    line-height: 1.5;\n  }\n  .faq-icon {\n    font-size: 20px;\n    color: #4a7a35;\n    flex-shrink: 0;\n    transition: transform 0.25s ease;\n  }\n  .faq-icon.open {\n    transform: rotate(45deg);\n  }\n  .faq-answer {\n    font-size: 0.9375rem;\n    color: #666;\n    line-height: 1.7;\n    max-height: 0;\n    overflow: hidden;\n    transition: max-height 0.3s ease, padding 0.3s ease;\n    padding: 0;\n  }\n  .faq-answer.open {\n    max-height: 300px;\n    padding-bottom: 1.25rem;\n  }\n  @media (max-width: 500px) {\n    .faq-title { font-size: 1.7rem; }\n    .faq-section { padding: 3rem 1.25rem; }\n  }\n</style>\n\n<section class=\"faq-section\">\n  <p class=\"faq-label\">Got questions?</p>\n  <h2 class=\"faq-title\">We've got answers</h2>\n  <p class=\"faq-subtitle\">Everything you need to know about our blends, ingredients, and how to brew your best cup.</p>\n\n  <div class=\"faq-list\">\n\n    <div class=\"faq-item\">\n      <button class=\"faq-question\" onclick=\"toggleFaq(this)\">\n        <span>Are your teas 100% natural and organic?</span>\n        <i class=\"ti ti-plus faq-icon\" aria-hidden=\"true\"></i>\n      </button>\n      <div class=\"faq-answer\">Yes — every blend is made with pure, natural ingredients. We use no additives, artificial flavors, or preservatives. Our herbs are carefully sourced from trusted origins to ensure you get the cleanest, most potent cup possible.</div>\n    </div>\n\n    <div class=\"faq-item\">\n      <button class=\"faq-question\" onclick=\"toggleFaq(this)\">\n        <span>How do I prepare my tea?</span>\n        <i class=\"ti ti-plus faq-icon\" aria-hidden=\"true\"></i>\n      </button>\n      <div class=\"faq-answer\">Mix one teaspoon of your chosen blend with a cup of hot water (not boiling — around 85–90°C is ideal). Stir well and let it steep for 3–5 minutes. Each product page also includes specific preparation tips for that blend.</div>\n    </div>\n\n    <div class=\"faq-item\">\n      <button class=\"faq-question\" onclick=\"toggleFaq(this)\">\n        <span>Can I drink these teas every day?</span>\n        <i class=\"ti ti-plus faq-icon\" aria-hidden=\"true\"></i>\n      </button>\n      <div class=\"faq-answer\">Most of our blends are designed for daily use. However, some herbal blends — like our Ashwagandha — come with specific usage recommendations. Always read the product warnings and consult your doctor if you are pregnant, breastfeeding, or on medication.</div>\n    </div>\n\n    <div class=\"faq-item\">\n      <button class=\"faq-question\" onclick=\"toggleFaq(this)\">\n        <span>How much does each pouch contain, and how long will it last?</span>\n        <i class=\"ti ti-plus faq-icon\" aria-hidden=\"true\"></i>\n      </button>\n      <div class=\"faq-answer\">Each pouch contains 100g of tea. With one teaspoon per serving, a single pouch gives you approximately 40–50 cups — that's over a month of daily brewing for most people.</div>\n    </div>\n\n    <div class=\"faq-item\">\n      <button class=\"faq-question\" onclick=\"toggleFaq(this)\">\n        <span>Do you ship internationally?</span>\n        <i class=\"ti ti-plus faq-icon\" aria-hidden=\"true\"></i>\n      </button>\n      <div class=\"faq-answer\">Yes! We ship to most countries worldwide. Shipping times and fees vary by destination. All orders are carefully packaged to keep your blends fresh during transit. Check the checkout page for delivery options available in your region.</div>\n    </div>\n\n  </div>\n</section>\n\n<script>\n  function toggleFaq(btn) {\n    const answer = btn.nextElementSibling;\n    const icon = btn.querySelector('.faq-icon');\n    const isOpen = answer.classList.contains('open');\n    document.querySelectorAll('.faq-answer.open').forEach(a => {\n      a.classList.remove('open');\n      a.previousElementSibling.querySelector('.faq-icon').classList.remove('open');\n    });\n    if (!isOpen) {\n      answer.classList.add('open');\n      icon.classList.add('open');\n    }\n  }\n</script>",
+        "full_width": false,
         "show_section_divider": false,
-        "make_full_page_width": false,
         "padding_top": 28,
         "padding_bottom": 28,
-        "image_alignment_mobile": "left",
-        "mobile_height": "250px",
+        "full_width_mobile": false,
         "show_section_divider_mobile": false,
         "padding_top_mobile": 28,
         "padding_bottom_mobile": 28
       }
     },
-    "multicolumn_bbt7xk": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_6RTcNP": {
-          "type": "column",
-          "settings": {
-            "icon": "truck",
-            "another_icon": "",
-            "custom_icon": "",
-            "title": "DELIVERY ALL OVER LEBANON",
-            "highlight_type": "underline",
-            "title_link": "",
-            "open_new_window": false,
-            "heading_size": 100,
-            "text": ""
-          }
-        },
-        "column_BgiaHn": {
-          "type": "column",
-          "settings": {
-            "icon": "telephone",
-            "another_icon": "",
-            "custom_icon": "",
-            "title": "24/7 Support",
-            "highlight_type": "underline",
-            "title_link": "",
-            "open_new_window": false,
-            "heading_size": 100,
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_6RTcNP",
-        "column_BgiaHn"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
+    "custom_liquid_FgUh9V": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "title": "",
-        "highlight_type": "underline",
-        "heading_size": 100,
-        "heading_tag": "h2",
-        "secondary_background": "none",
-        "border_column": "column",
-        "column_content_alignment": "center",
-        "icon_position": "above",
-        "icon_size": 45,
-        "enable_desktop_slider": true,
-        "swiper_on_mobile": false,
-        "auto_play": true,
-        "change_bar_every": 5,
-        "background_color_light": "rgba(0,0,0,0)",
-        "heading_light": "rgba(0,0,0,0)",
-        "text_light": "rgba(0,0,0,0)",
-        "color_heading_highlight_light": "rgba(0,0,0,0)",
-        "line_border_light": "rgba(0,0,0,0)",
-        "color_icon_light": "rgba(0,0,0,0)",
-        "background_color_dark": "rgba(0,0,0,0)",
-        "heading_dark": "rgba(0,0,0,0)",
-        "text_dark": "rgba(0,0,0,0)",
-        "color_heading_highlight_dark": "rgba(0,0,0,0)",
-        "line_border_dark": "rgba(0,0,0,0)",
-        "color_icon_dark": "rgba(0,0,0,0)",
-        "column_layout_desktop": "lg:w-1/4",
-        "section_height_desktop": "md:py-7",
-        "spacing_desktop": 28,
+        "custom_liquid": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css\" />\n\n<style>\n  .guarantees-section {\n    padding: 4rem 2rem;\n    background: #f7f5f0;\n    font-family: sans-serif;\n  }\n  .guarantees-inner {\n    max-width: 1000px;\n    margin: 0 auto;\n  }\n  .guarantees-label {\n    font-size: 13px;\n    font-weight: 500;\n    letter-spacing: 0.12em;\n    text-transform: uppercase;\n    color: #5a7a4a;\n    text-align: center;\n    margin-bottom: 0.75rem;\n  }\n  .guarantees-title {\n    font-size: 2.2rem;\n    font-weight: 500;\n    color: #1a1a1a;\n    text-align: center;\n    margin: 0 0 0.75rem;\n    line-height: 1.2;\n  }\n  .guarantees-subtitle {\n    font-size: 1rem;\n    color: #666;\n    text-align: center;\n    margin: 0 auto 3rem;\n    max-width: 480px;\n    line-height: 1.7;\n  }\n  .guarantees-grid {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    gap: 1.5rem;\n  }\n  .guarantee-card {\n    background: #fff;\n    border-radius: 14px;\n    padding: 2rem 1.5rem;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    text-align: center;\n    gap: 1rem;\n    border: 1px solid #ece9e1;\n  }\n  .guarantee-icon-wrap {\n    width: 64px;\n    height: 64px;\n    border-radius: 50%;\n    background: #f0f5eb;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-shrink: 0;\n  }\n  .guarantee-icon-wrap i {\n    font-size: 28px;\n    color: #4a7a35;\n  }\n  .guarantee-name {\n    font-size: 1rem;\n    font-weight: 500;\n    color: #1a1a1a;\n    margin: 0 0 0.3rem;\n  }\n  .guarantee-desc {\n    font-size: 0.875rem;\n    color: #666;\n    line-height: 1.6;\n    margin: 0;\n  }\n  @media (max-width: 720px) {\n    .guarantees-grid {\n      grid-template-columns: repeat(2, 1fr);\n    }\n    .guarantees-title {\n      font-size: 1.75rem;\n    }\n  }\n  @media (max-width: 400px) {\n    .guarantees-grid {\n      grid-template-columns: 1fr;\n    }\n  }\n</style>\n\n<section class=\"guarantees-section\">\n  <div class=\"guarantees-inner\">\n    <p class=\"guarantees-label\">Our promise</p>\n    <h2 class=\"guarantees-title\">You're in good hands</h2>\n    <p class=\"guarantees-subtitle\">We stand behind everything we do — from the herbs we source to the moment your order arrives at your door.</p>\n\n    <div class=\"guarantees-grid\">\n\n      <div class=\"guarantee-card\">\n        <div class=\"guarantee-icon-wrap\">\n          <i class=\"ti ti-shield-check\" aria-hidden=\"true\"></i>\n        </div>\n        <div>\n          <p class=\"guarantee-name\">30-Day money back</p>\n          <p class=\"guarantee-desc\">Not satisfied? We'll give you a full refund within 30 days — no questions asked, no hassle.</p>\n        </div>\n      </div>\n\n      <div class=\"guarantee-card\">\n        <div class=\"guarantee-icon-wrap\">\n          <i class=\"ti ti-truck-delivery\" aria-hidden=\"true\"></i>\n        </div>\n        <div>\n          <p class=\"guarantee-name\">Fast & safe shipping</p>\n          <p class=\"guarantee-desc\">Every order is carefully packed and shipped promptly so your blends arrive fresh and on time.</p>\n        </div>\n      </div>\n\n      <div class=\"guarantee-card\">\n        <div class=\"guarantee-icon-wrap\">\n          <i class=\"ti ti-lock\" aria-hidden=\"true\"></i>\n        </div>\n        <div>\n          <p class=\"guarantee-name\">Secure checkout</p>\n          <p class=\"guarantee-desc\">Your payment and personal data are always protected with industry-standard encryption.</p>\n        </div>\n      </div>\n\n      <div class=\"guarantee-card\">\n        <div class=\"guarantee-icon-wrap\">\n          <i class=\"ti ti-headset\" aria-hidden=\"true\"></i>\n        </div>\n        <div>\n          <p class=\"guarantee-name\">Dedicated support</p>\n          <p class=\"guarantee-desc\">Our team is here to help with any questions — before, during, or after your purchase.</p>\n        </div>\n      </div>\n\n    </div>\n  </div>\n</section>",
         "full_width": false,
-        "padding_full_width": false,
         "show_section_divider": false,
         "padding_top": 28,
         "padding_bottom": 28,
-        "column_layout_mobile": "w-full",
-        "section_height_mobile": "py-5",
-        "spacing_mobile": 16,
         "full_width_mobile": false,
         "show_section_divider_mobile": false,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
       }
     }
   },
@@ -464,7 +344,7 @@
     "scrolling_banner_6fW3xL",
     "custom_liquid_aJ3Rjw",
     "scrolling_banner_9fE7Y9",
-    "faq_McEVrE",
-    "multicolumn_bbt7xk"
+    "custom_liquid_3w7JfL",
+    "custom_liquid_FgUh9V"
   ]
 }
