@@ -76,7 +76,7 @@
         "logo_width_mobile": 100,
         "show_social_icons": false,
         "enable_on_homepage": true,
-        "enable_on_collection_page": true,
+        "enable_on_collection_page": false,
         "shadow": 36,
         "text_color_light": "#ffffff",
         "textlink_color_light": "rgba(0,0,0,0)",
