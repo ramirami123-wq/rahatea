@@ -338,10 +338,10 @@
         "show_section_divider": false,
         "padding_top": 0,
         "padding_bottom": 0,
-        "full_width_mobile": false,
+        "full_width_mobile": true,
         "show_section_divider_mobile": false,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
       }
     }
   },
